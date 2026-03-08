@@ -21,6 +21,8 @@
 		"@parcel/transformer-sass": "^2.16.4",
 		"@types/node": "^25.3.5",
 		"parcel": "^2.16.4",
+		"postcss-normalize": "^13.0.1",
+		"posthtml-include": "^2.0.1",
 		"sass": "^1.97.3",
 		"typescript": "^5.9.3"
 	}
