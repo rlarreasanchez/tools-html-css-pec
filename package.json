@@ -2,6 +2,7 @@
 	"name": "tools-html-css-pec",
 	"version": "1.0.0",
 	"type": "module",
+	"browserslist": "> 0.2%, last 10 years, not dead",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
