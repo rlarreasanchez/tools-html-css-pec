@@ -1,0 +1,42 @@
+@use 'variables' as *;
+
+body {
+  font-family: $font-body;
+  font-size: $font-size-base;
+  font-weight: $font-weight-normal;
+  line-height: $line-height-normal;
+  min-height: 100vh;
+  color: $color-foreground;
+  background-color: $color-background;
+}
+
+.section-label {
+  display: block;
+  font-family: $font-body;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-bold;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: $color-primary;
+  margin-bottom: $space-sm;
+}
+
+.section-title {
+  font-family: $font-heading;
+  font-size: $font-size-2xl;
+  font-weight: $font-weight-heading;
+  line-height: $line-height-tight;
+  color: $color-foreground;
+  margin-bottom: $space-md;
+
+  @media (min-width: $breakpoint-md) {
+    font-size: $font-size-3xl;
+  }
+}
+
+.section-description {
+  font-size: $font-size-md;
+  line-height: $line-height-relaxed;
+  color: $color-muted;
+  max-width: 600px;
+}

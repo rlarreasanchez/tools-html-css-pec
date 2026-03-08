@@ -1,0 +1,22 @@
+@use 'variables' as *;
+
+.recipes {
+  padding: $space-4xl 0;
+  background-color: $color-background;
+
+  &__container {
+    max-width: $container-max-width;
+    margin: 0 auto;
+    padding: 0 $container-padding;
+  }
+
+  &__header {
+    text-align: center;
+    margin-bottom: $space-3xl;
+
+    .section-description {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
