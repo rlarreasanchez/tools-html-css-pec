@@ -1,0 +1,22 @@
+{
+	"compilerOptions": {
+		"module": "esnext",
+		"target": "esnext",
+		"lib": ["esnext", "dom"],
+		"moduleResolution": "bundler",
+		// Stricter Typechecking Options
+		"noUncheckedIndexedAccess": true,
+		"exactOptionalPropertyTypes": true,
+		// Recommended Options
+		"strict": true,
+		"jsx": "react-jsx",
+		"isolatedModules": true,
+		"noUncheckedSideEffectImports": false,
+		"moduleDetection": "force",
+		"skipLibCheck": true,
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true
+	},
+	"include": ["src/**/*.ts"],
+	"exclude": ["node_modules", "dist", ".parcel-cache"]
+}
