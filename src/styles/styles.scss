@@ -1,6 +1,10 @@
 @use 'variables' as *;
 
+@use 'buttons';
+
 @use 'header';
+
+@use 'hero';
 
 *,
 *::before,
