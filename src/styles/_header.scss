@@ -5,6 +5,7 @@
   top: 0;
   z-index: 1000;
   background-color: $color-background;
+  border-bottom: 1px solid $color-background-dark;
 
   &__container {
     display: flex;
@@ -22,4 +23,34 @@
     align-items: center;
     gap: 2rem;
   }
+
+  &__link {
+    display: block;
+    padding: $space-sm $space-md;
+    font-family: $font-body;
+    font-size: $font-size-base;
+    font-weight: $font-weight-bold;
+    color: $color-foreground;
+    text-decoration: none;
+    border-radius: $radius-md;
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+    // Línea indicadora para el enlace activo
+    &--active {
+      color: $color-foreground;
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 2px;
+        left: $space-md;
+        right: $space-md;
+        height: 2px;
+        background-color: $color-foreground;
+        border-radius: 1px;
+      }
+    }
+  }
+
 }
