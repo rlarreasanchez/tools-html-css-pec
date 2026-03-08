@@ -1,0 +1,22 @@
+{
+	"name": "tools-html-css-pec",
+	"version": "1.0.0",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [
+		"html",
+		"css",
+		"parcel",
+		"typescript",
+		"sass",
+		"posthtml",
+		"postcss"
+	],
+	"author": "Rafael Larrea Sánchez",
+	"license": "ISC",
+	"description": "Proyecto académico de Implementación de un sitio web de recetas utilizando herramientas modernas: Parcel, TypeScript, Sass y PostHTML.",
+	"devDependencies": {
+		"parcel": "^2.16.4"
+	}
+}

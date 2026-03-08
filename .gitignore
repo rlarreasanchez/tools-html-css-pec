@@ -1,0 +1,11 @@
+# Directorio de salida de Parcel (por defecto es 'dist')
+dist/
+
+# Caché de Parcel (donde guarda datos temporales para compilaciones rápidas)
+.parcel-cache/
+
+# Dependencias de Node.js
+node_modules/
+
+# Archivos de sistema y logs
+npm-debug.log*
