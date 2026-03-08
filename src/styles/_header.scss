@@ -1,0 +1,25 @@
+@use 'variables' as *;
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: $color-background;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: $container-max-width;
+    margin: 0 auto;
+    padding: $space-md $container-padding;
+  }
+}
+
+.site-nav {
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+}
