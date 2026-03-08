@@ -16,6 +16,28 @@
     padding: $space-md $container-padding;
   }
 
+  &__logo {
+    color: $color-foreground;
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+
+  &__logo-text {
+    font-family: $font-heading;
+    font-size: $font-size-lg;
+    font-weight: $font-weight-heading;
+    line-height: $line-height-tight;
+  }
+
+  &__logo-ampersand {
+    color: $color-primary;
+    font-style: italic;
+  }
+
   &__menu-toggle {
     display: flex;
     align-items: center;
@@ -128,9 +150,13 @@
         left: $space-md;
         right: $space-md;
         height: 2px;
-        background-color: $color-foreground;
+        background-color: $color-primary;
         border-radius: 1px;
       }
+    }
+
+    &:hover {
+      background-color: $color-background-dark;
     }
 
     @media (max-width: ($breakpoint-lg - 1px)) {
