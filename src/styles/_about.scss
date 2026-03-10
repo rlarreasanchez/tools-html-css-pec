@@ -1,0 +1,104 @@
+@use 'variables' as *;
+
+.about {
+  padding: $space-4xl 0;
+  background-color: $color-background-dark;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: $space-3xl;
+    max-width: $container-max-width;
+    margin: 0 auto;
+    padding: 0 $container-padding;
+
+    @media (min-width: $breakpoint-lg) {
+      flex-direction: row;
+      align-items: center;
+      gap: $space-4xl;
+    }
+  }
+
+  &__image-col {
+    flex: 1;
+
+    @media (min-width: $breakpoint-lg) {
+      flex: 0 0 45%;
+    }
+  }
+
+  &__image-wrapper {
+    border-radius: $radius-lg;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+    display: block;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+  }
+
+  &__text-col {
+    flex: 1;
+  }
+
+  &__text {
+    font-size: $font-size-md;
+    line-height: $line-height-relaxed;
+    color: $color-muted;
+    margin-bottom: $space-md;
+
+    strong {
+      color: $color-foreground;
+      font-weight: $font-weight-heading;
+    }
+  }
+
+  &__stats {
+    display: flex;
+    gap: $space-xl;
+    margin: $space-xl 0;
+    padding: $space-lg 0;
+    border-top: 1px solid rgba($color-foreground, 0.1);
+    border-bottom: 1px solid rgba($color-foreground, 0.1);
+
+    @media(max-width: ($breakpoint-sm - 1px)) {
+      flex-direction: column;
+      gap: $space-md;
+    }
+  }
+
+  &__stat {
+    text-align: center;
+    flex: 1;
+
+    @media(max-width: ($breakpoint-sm - 1px)) {
+      text-align: left;
+      display: flex;
+      align-items: baseline;
+      gap: $space-sm;
+    }
+  }
+
+  &__stat-number {
+    display: block;
+    font-family: $font-heading;
+    font-size: $font-size-3xl;
+    font-weight: $font-weight-heading;
+    line-height: 1;
+    color: $color-primary;
+    margin-bottom: $space-sm;
+  }
+
+  &__stat-label {
+    display: block;
+    font-size: $font-size-sm;
+    font-weight: $font-weight-bold;
+    color: $color-muted;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+}
