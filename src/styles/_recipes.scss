@@ -19,4 +19,17 @@
       margin-right: auto;
     }
   }
+
+  &__grid {
+    display: grid;
+    max-width: $container-max-width;
+    margin: 0 auto;
+    padding: 0 $container-padding;
+    gap: $space-2xl;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+    @media (min-width: $breakpoint-lg) {
+      gap: $space-3xl;
+    }
+  }
 }

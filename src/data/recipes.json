@@ -1,0 +1,35 @@
+[
+	{
+		"title": "<span lang=\"it\">Tagliatelle al tartufo</span>",
+		"description": "Pasta fresca hecha a mano con una delicada salsa de trufa negra de temporada y parmesano <span lang=\"it\">Reggiano</span>.",
+		"link": "#",
+		"link_aria_label": "Leer receta completa de Tagliatelle al tartufo",
+		"image": "recipe-1.jpg",
+		"alt_image": "Plato de pasta tagliatelle con salsa de trufa, albahaca fresca y queso parmesano rallado sobre plato de ceramica",
+		"category": "Pasta",
+		"duration": "45 minutos",
+		"difficulty": "Media"
+	},
+	{
+		"title": "<span lang=\"it\">Tiramisu</span> clasico",
+		"description": "La receta tradicional italiana con <span lang=\"it\">mascarpone</span> cremoso, cafe <span lang=\"it\">espresso</span> y un toque de cacao amargo.",
+		"link": "#",
+		"link_aria_label": "Leer receta completa de Tiramisu clasico",
+		"image": "recipe-2.jpg",
+		"alt_image": "Tiramisu clasico",
+		"category": "Postres",
+		"duration": "60 minutos",
+		"difficulty": "Media"
+	},
+	{
+		"title": "Salmon a la plancha con eneldo",
+		"description": "Filete de salmon noruego cocinado a la perfeccion con una salsa ligera de limon y hierbas frescas del huerto.",
+		"link": "#",
+		"link_aria_label": "Leer receta completa de Salmon a la plancha con eneldo",
+		"image": "recipe-3.jpg",
+		"alt_image": "Salmon a la plancha con eneldo",
+		"category": "Pescado",
+		"duration": "30 minutos",
+		"difficulty": "Fácil"
+	}
+]

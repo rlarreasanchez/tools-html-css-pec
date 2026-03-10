@@ -18,4 +18,14 @@
 			</p>
 		</div>
 	</div>
+
+	<div class="recipes__grid">
+		<each loop="recipe in recipes">
+			<include
+				src="partials/recipe-card.html"
+				locals="recipe"
+			>
+			</include>
+		</each>
+	</div>
 </section>
