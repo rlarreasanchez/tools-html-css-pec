@@ -1,0 +1,134 @@
+@use 'variables' as *;
+
+.site-footer {
+  background-color: $color-footer-bg;
+  color: $color-muted-light;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: $space-3xl;
+    max-width: $container-max-width;
+    margin: 0 auto;
+    padding: $space-3xl $container-padding;
+
+    @media (min-width: $breakpoint-md) {
+      flex-direction: row;
+      gap: $space-4xl;
+    }
+  }
+
+  &__brand {
+    flex: 0 0 280px;
+
+    @media (min-width: ($breakpoint-md - 1px)) {
+      flex: inicial;
+    }
+  }
+
+  &__logo {
+    display: inline-block;
+    text-decoration: none;
+    color: $color-white;
+    margin-bottom: $space-md;
+
+    &:hover {
+      color: $color-background;
+    }
+  }
+
+  &__logo-text {
+    font-family: $font-heading;
+    font-size: $font-size-xl;
+    font-weight: $font-weight-heading;
+  }
+
+  &__logo-ampersand {
+    color: $color-primary;
+    font-style: italic;
+  }
+
+  &__tagline {
+    font-size: $font-size-sm;
+    line-height: $line-height-relaxed;
+    color: $color-muted-light;
+  }
+
+  &__nav {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    gap: $space-xl;
+
+    @media (min-width: $breakpoint-md) {
+      justify-content: space-between;
+    }
+  }
+
+  &__nav-group {
+    min-width: 140px;
+  }
+
+  &__nav-title {
+    font-family: $font-body;
+    font-size: $font-size-sm;
+    font-weight: $font-weight-heading;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: $color-white;
+    margin-bottom: $space-md;
+  }
+
+  &__nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: $space-sm;
+  }
+
+  &__link {
+    font-size: $font-size-sm;
+    color: $color-muted-light;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: inline-block;
+    align-items: center;
+    gap: $space-xs;
+
+    &:hover {
+      color: $color-white;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+  }
+
+  &__bottom {
+    border-top: 1px solid $color-footer-bg-alt;
+  }
+
+  &__bottom-container {
+    display: flex;
+    flex-direction: column;
+    gap: $space-md;
+    max-width: $container-max-width;
+    margin: 0 auto;
+    padding: $space-lg $container-padding;
+    align-items: center;
+    text-align: center;
+
+    @media (min-width: $breakpoint-md) {
+      flex-direction: row;
+      justify-content: space-between;
+      text-align: left;
+    }
+  }
+
+  &__copyright {
+    font-size: $font-size-xs;
+    color: $color-muted-light;
+  }
+
+  &__legal {
+    display: flex;
+    gap: $space-lg;
+  }
+}
