@@ -1,22 +1,21 @@
 @use 'variables' as *;
 
+// Base
 @use 'typography';
-
 @use 'icons';
-
 @use 'buttons';
 
-@use 'header';
-
-@use 'hero';
-
-@use 'recipes';
-
+// Componentes
+@use 'breadcrumb';
 @use 'recipe-card';
 
+// Secciones
+@use 'header';
 @use 'about';
-
 @use 'footer';
+@use 'hero';
+@use 'recipes';
+@use 'page-header';
 
 *,
 *::before,

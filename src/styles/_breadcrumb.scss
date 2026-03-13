@@ -1,0 +1,43 @@
+@use 'variables' as *;
+
+.breadcrumb {
+  margin-bottom: $space-lg;
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: $space-xs;
+    font-size: $font-size-sm;
+    color: $color-muted;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: $space-xs;
+
+    // Separator
+    &:not(:last-child)::after {
+      content: '/';
+      color: $color-muted-light;
+      margin-left: $space-xs;
+    }
+  }
+
+  &__link {
+    color: $color-primary;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: $color-primary-dark;
+    }
+  }
+
+  &__current {
+    color: $color-foreground;
+    font-weight: $font-weight-bold;
+  }
+}

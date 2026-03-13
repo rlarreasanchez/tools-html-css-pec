@@ -1,0 +1,36 @@
+@use 'variables' as *;
+
+.page-header {
+  padding: $space-3xl 0 $space-2xl;
+  background-color: $color-background-dark;
+
+  &--small {
+    padding: $space-2xl 0 $space-xl;
+  }
+
+  &__container {
+    max-width: $container-max-width;
+    margin: 0 auto;
+    padding: 0 $container-padding;
+  }
+
+  &__title {
+    font-family: $font-heading;
+    font-size: $font-size-3xl;
+    font-weight: $font-weight-black;
+    line-height: $line-height-tight;
+    color: $color-foreground;
+    margin-bottom: $space-md;
+
+    @media (min-width: $breakpoint-md) {
+      font-size: $font-size-4xl;
+    }
+  }
+
+  &__subtitle {
+    font-size: $font-size-md;
+    line-height: $line-height-relaxed;
+    color: $color-muted;
+    max-width: 640px;
+  }
+}

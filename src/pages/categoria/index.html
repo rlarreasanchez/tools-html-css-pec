@@ -33,10 +33,50 @@
 			rel="stylesheet"
 		/>
 	</head>
+	<script
+		locals
+		type="module"
+	>
+		module.exports = {
+			breadcrumb: [
+				{
+					name: "Inicio",
+					url: "/",
+					aria_label: "Ir a la página de inicio",
+				},
+				{
+					name: "Recetas",
+				},
+			],
+		};
+	</script>
 	<body>
 		<include src="partials/header.html"></include>
 
-		<main id="main-content"></main>
+		<main id="main-content">
+			<!-- Header / Breadcrumbs -->
+			<section
+				class="page-header page-header--small"
+				aria-labelledby="page-title"
+			>
+				<div class="page-header__container">
+					<include
+						src="partials/breadcrumb.html"
+						locals="breadcrumb"
+					></include>
+					<h1
+						id="page-title"
+						class="page-header__title"
+					>
+						Nuestras Recetas
+					</h1>
+					<p class="page-header__subtitle">
+						Explora nuestra coleccion completa de recetas artesanales, organizadas por temporada y
+						tipo de cocina.
+					</p>
+				</div>
+			</section>
+		</main>
 
 		<include src="partials/footer.html"></include>
 
