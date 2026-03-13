@@ -20,10 +20,22 @@
 			<p class="recipe-card__description">{{{ recipe.description }}}</p>
 			<dl class="recipe-card__meta">
 				<div class="recipe-card__meta-item">
-					<dd>{{ recipe.duration }}</dd>
+					<dd>
+						<i
+							class="far fa-clock icon--primary"
+							aria-hidden="true"
+						></i>
+						{{ recipe.duration }}
+					</dd>
 				</div>
 				<div class="recipe-card__meta-item">
-					<dd>{{ recipe.difficulty }}</dd>
+					<dd>
+						<i
+							class="far fa-star icon--primary"
+							aria-hidden="true"
+						></i>
+						{{ recipe.difficulty }}
+					</dd>
 				</div>
 			</dl>
 		</div>
