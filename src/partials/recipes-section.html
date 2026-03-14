@@ -20,7 +20,7 @@
 	</div>
 
 	<div class="recipes__grid">
-		<each loop="recipe in recipes">
+		<each loop="recipe in recipes.slice(0, 6)">
 			<include
 				src="partials/recipe-card.html"
 				locals="recipe"

@@ -96,7 +96,11 @@
 						role="list"
 					>
 						<each loop="recipe in recipes">
-							<li class="category__item">
+							<li
+								class="category__item"
+								data-page="{{ recipe.page }}"
+								data-index="{{ recipe.index }}"
+							>
 								<include
 									src="partials/recipe-card.html"
 									locals="recipe"
@@ -109,39 +113,25 @@
 					<nav
 						class="category-list__pagination"
 						aria-label="Paginación de recetas"
+						id="pagination-nav"
 					>
 						<ul
 							class="pagination"
 							role="list"
+							id="pagination-list"
 						>
-							<li class="pagination__item">
-								<a
-									href="#"
-									class="pagination__link is-active"
-									aria-label="Página 1, página actual"
-									aria-current="page"
-								>
-									1
-								</a>
-							</li>
-							<li class="pagination__item">
-								<a
-									href="#"
-									class="pagination__link"
-									aria-label="Página 2"
-								>
-									2
-								</a>
-							</li>
-							<li class="pagination__item">
-								<a
-									href="#"
-									class="pagination__link"
-									aria-label="Página 3"
-								>
-									3
-								</a>
-							</li>
+							<each loop="page in pagination.pages">
+								<li class="pagination__item">
+									<button
+										class="pagination__link"
+										data-page="{{ page }}"
+										aria-label="Página {{ page }}"
+										type="button"
+									>
+										{{ page }}
+									</button>
+								</li>
+							</each>
 						</ul>
 					</nav>
 				</div>

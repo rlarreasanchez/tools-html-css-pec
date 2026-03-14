@@ -64,5 +64,49 @@
 		"category": "Arroces",
 		"duration": "40 minutos",
 		"difficulty": "Media"
+	},
+	{
+		"title": "<span lang=\"it\">Spaguetti</span> a la carbonara",
+		"description": "Pasta al dente con una salsa cremosa de huevo, queso pecorino romano y panceta crujiente.",
+		"link": "#",
+		"link_aria_label": "Leer receta completa de Spaguetti a la carbonara",
+		"image": "recipe-7.jpg",
+		"alt_image": "Spaguetti a la carbonara en un plato blanco con panceta crujiente y queso rallado por encima",
+		"category": "Pasta",
+		"duration": "30 minutos",
+		"difficulty": "Media"
+	},
+	{
+		"title": "<span lang=\"it\">Cannoli siciliani</span>",
+		"description": "Deliciosos <span lang=\"it\">cannoli</span> rellenos de <span lang=\"it\">ricotta</span> dulce y decorados con pistachos triturados y chocolate rallado.",
+		"link": "#",
+		"link_aria_label": "Leer receta completa de Cannoli siciliani",
+		"image": "recipe-8.jpg",
+		"alt_image": "Cannoli siciliani en un plato con relleno de ricotta y decoracion de pistachos y chocolate",
+		"category": "Postres",
+		"duration": "50 minutos",
+		"difficulty": "Media"
+	},
+	{
+		"title": "Salmorejo cordobés",
+		"description": "Sopa fría de tomate y pan, más espesa que el gazpacho, tradicional de Córdoba. Se sirve con huevo duro picado y jamón serrano.",
+		"link": "#",
+		"link_aria_label": "Leer receta completa de Salmorejo cordobés",
+		"image": "recipe-9.jpg",
+		"alt_image": "Salmorejo cordobés servido en un plato hondo con huevo duro picado y jamón serrano por encima",
+		"category": "Sopas",
+		"duration": "25 minutos",
+		"difficulty": "Fácil"
+	},
+	{
+		"title": "Pescado al curry con leche de coco",
+		"description": "Filetes de pescado blanco cocinados en una salsa suave de curry y leche de coco, acompañados de patatas y un toque de pimentón ahumado.",
+		"link": "#",
+		"link_aria_label": "Leer receta completa de Pescado al curry con leche de coco",
+		"image": "recipe-10.jpg",
+		"alt_image": "Pescado al curry con leche de coco servido con patatas y pimentón ahumado",
+		"category": "Pescado",
+		"duration": "35 minutos",
+		"difficulty": "Fácil"
 	}
 ]
