@@ -76,6 +76,76 @@
 					</p>
 				</div>
 			</section>
+
+			<section
+				class="category-list"
+				id="category-list"
+				aria-label="Listado de recetas"
+				aria-labelledby="category-list-title"
+			>
+				<div class="category-list__container">
+					<h2
+						id="category-list-title"
+						class="category-list__title"
+					>
+						Listado de Recetas
+					</h2>
+					<ul
+						class="category-list__grid"
+						id="category-grid"
+						role="list"
+					>
+						<each loop="recipe in recipes">
+							<li class="category__item">
+								<include
+									src="partials/recipe-card.html"
+									locals="recipe"
+								>
+								</include>
+							</li>
+						</each>
+					</ul>
+
+					<nav
+						class="category-list__pagination"
+						aria-label="Paginación de recetas"
+					>
+						<ul
+							class="pagination"
+							role="list"
+						>
+							<li class="pagination__item">
+								<a
+									href="#"
+									class="pagination__link is-active"
+									aria-label="Página 1, página actual"
+									aria-current="page"
+								>
+									1
+								</a>
+							</li>
+							<li class="pagination__item">
+								<a
+									href="#"
+									class="pagination__link"
+									aria-label="Página 2"
+								>
+									2
+								</a>
+							</li>
+							<li class="pagination__item">
+								<a
+									href="#"
+									class="pagination__link"
+									aria-label="Página 3"
+								>
+									3
+								</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</section>
 		</main>
 
 		<include src="partials/footer.html"></include>

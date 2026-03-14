@@ -31,5 +31,38 @@
 		"category": "Pescado",
 		"duration": "30 minutos",
 		"difficulty": "Fácil"
+	},
+	{
+		"title": "Paella valenciana",
+		"description": "La autentica paella con arroz bomba, azafran de la Mancha, pollo de corral y verduras de la huerta levantina.",
+		"link": "#",
+		"link_aria_label": "Leer receta completa de Paella valenciana",
+		"image": "recipe-4.jpg",
+		"alt_image": "Paella valenciana en una paellera tradicional con arroz al azafran, pollo, conejo, judias verdes y romero",
+		"category": "Arroces",
+		"duration": "75 minutos",
+		"difficulty": "Alta"
+	},
+	{
+		"title": "Gazpacho andaluz",
+		"description": "Sopa fría de tomate, pimiento, pepino y ajo con aceite de oliva virgen extra. El clásico refrescante del verano español.",
+		"link": "#",
+		"link_aria_label": "Leer receta completa de Gazpacho andaluz",
+		"image": "recipe-5.jpg",
+		"alt_image": "Gazpacho andaluz en un cuenco blanco decorado con aceite de oliva y albahaca fresca",
+		"category": "Sopas",
+		"duration": "20 minutos",
+		"difficulty": "Fácil"
+	},
+	{
+		"title": "<span lang=\"it\">Risotto ai funghi porcini</span>",
+		"description": "Risotto cremoso con funghi porcini freschi, parmigiano reggiano y un toque de mantequilla. Ideal para una cena elegante.",
+		"link": "#",
+		"link_aria_label": "Leer receta completa de Risotto ai funghi porcini",
+		"image": "recipe-6.png",
+		"alt_image": "Risotto ai funghi porcini servido en un plato hondo con perejil fresco espolvoreado por encima",
+		"category": "Arroces",
+		"duration": "40 minutos",
+		"difficulty": "Media"
 	}
 ]

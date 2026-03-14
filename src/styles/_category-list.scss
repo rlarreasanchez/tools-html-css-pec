@@ -1,0 +1,100 @@
+@use 'variables' as *;
+
+.category-list {
+  padding: $space-3xl 0 $space-4xl;
+  background-color: $color-background;
+
+  &__container {
+    max-width: $container-max-width;
+    margin: 0 auto;
+    padding: 0 $container-padding;
+  }
+
+  &__title {
+    font-family: $font-heading;
+    font-size: $font-size-xl;
+    font-weight: $font-weight-heading;
+    line-height: $line-height-tight;
+    color: $color-foreground;
+    margin-bottom: $space-sm;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $space-xl;
+
+    @media (min-width: $breakpoint-md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: $breakpoint-lg) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .category__item {
+    display: flex;
+  }
+
+  .category__item .recipe-card {
+    flex: 1;
+  }
+
+  &__pagination {
+    margin-top: $space-xl;
+    padding-top: $space-2xl;
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: $space-sm;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  &__item {
+    display: block;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 50px;
+    height: 44px;
+    padding: $space-sm $space-md;
+    font-family: $font-body;
+    font-size: $font-size-base;
+    font-weight: $font-weight-bold;
+    text-decoration: none;
+    color: $color-muted;
+    background-color: transparent;
+    border: 2px solid $color-background-dark;
+    border-radius: $radius-md;
+    transition: all 0.3s ease;
+
+    &:hover:not(.is-active) {
+      color: $color-white;
+      background-color: $color-primary;
+      border-color: $color-primary;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 6px rgba($color-primary, 0.3);
+    }
+
+    &:focus-visible {
+      outline: 2px solid $color-primary;
+      outline-offset: 2px;
+    }
+
+    &.is-active {
+      color: $color-white;
+      background-color: $color-primary;
+      border-color: $color-primary;
+      cursor: default;
+    }
+  }
+}
