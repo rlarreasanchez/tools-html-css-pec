@@ -90,6 +90,40 @@
 					>
 						Listado de Recetas
 					</h2>
+
+					<!-- Filtros de categorías -->
+					<div
+						class="category-filters"
+						role="group"
+						aria-label="Filtros de categorías"
+					>
+						<h3 class="category-filters__title">Filtrar por categoría:</h3>
+						<div class="category-filters__buttons">
+							<each loop="category in categories">
+								<button
+									class="category-filters__button"
+									data-category="{{ category }}"
+									type="button"
+									aria-label="Filtrar por {{ category }}"
+								>
+									{{ category }}
+								</button>
+							</each>
+							<button
+								class="category-filters__clear"
+								id="clear-filters-btn"
+								type="button"
+								aria-label="Limpiar todos los filtros"
+							>
+								<i
+									class="fas fa-times"
+									aria-hidden="true"
+								></i>
+								Limpiar
+							</button>
+						</div>
+					</div>
+
 					<ul
 						class="category-list__grid"
 						id="category-grid"
@@ -100,6 +134,7 @@
 								class="category__item"
 								data-page="{{ recipe.page }}"
 								data-index="{{ recipe.index }}"
+								data-category="{{ recipe.category }}"
 							>
 								<include
 									src="partials/recipe-card.html"

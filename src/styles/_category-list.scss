@@ -55,6 +55,102 @@
   }
 }
 
+// Filtros de categoría
+.category-filters {
+  margin-bottom: $space-2xl;
+  padding: $space-lg;
+  background-color: rgba($color-primary, 0.05);
+  border-radius: $radius-lg;
+
+  &__title {
+    font-family: $font-body;
+    font-size: $font-size-base;
+    font-weight: $font-weight-bold;
+    color: $color-foreground;
+    margin-bottom: $space-md;
+  }
+
+  &__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $space-sm;
+  }
+
+  &__button {
+    padding: $space-sm $space-lg;
+    font-family: $font-body;
+    font-size: $font-size-md;
+    font-weight: $font-weight-bold;
+    color: $color-primary;
+    background-color: $color-white;
+    border: 2px solid $color-primary;
+    border-radius: $radius-sm;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover:not(.is-active) {
+      color: $color-white;
+      background-color: rgba($color-primary, 0.8);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba($color-primary, 0.2);
+    }
+
+    &:focus-visible {
+      outline: 2px solid $color-primary;
+      outline-offset: 2px;
+    }
+
+    &.is-active {
+      color: $color-white;
+      background-color: $color-primary;
+      box-shadow: 0 2px 4px rgba($color-primary, 0.4);
+
+      &:hover {
+        background-color: $color-primary-dark;
+      }
+    }
+  }
+
+  &__clear {
+    display: none;
+    padding: $space-sm $space-lg;
+    font-family: $font-body;
+    font-size: $font-size-md;
+    font-weight: $font-weight-bold;
+    color: $color-danger;
+    background-color: $color-white;
+    border: 2px solid $color-danger-dark;
+    border-radius: $radius-sm;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    align-items: center;
+    gap: $space-xs;
+
+    i {
+      font-size: $font-size-sm;
+    }
+
+    &:hover {
+      background-color: $color-danger;
+      color: $color-white;
+      border-color: $color-danger-dark;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba($color-danger, 0.3);
+    }
+
+    &:focus-visible {
+      outline: 2px solid $color-danger;
+      outline-offset: 2px;
+    }
+
+    &.is-visible {
+      display: inline-flex;
+      animation: fadeIn 0.3s ease-out;
+    }
+  }
+}
+
+// Paginación
 .pagination {
   display: flex;
   justify-content: center;
@@ -108,7 +204,7 @@
   }
 }
 
-// Animación de fade in para los items de recetas
+// Animaciones para los filtros y las recetas
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -117,5 +213,14 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
