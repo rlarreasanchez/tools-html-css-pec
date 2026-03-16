@@ -1,0 +1,138 @@
+<section
+	class="newsletter"
+	id="newsletter"
+	aria-labelledby="newsletter-title"
+>
+	<div class="newsletter__container">
+		<div class="newsletter__content">
+			<span class="section-label section-label--light">Newsletter</span>
+			<h2
+				class="section-title section-title--light"
+				id="newsletter-title"
+			>
+				Suscríbete a nuestro boletín
+			</h2>
+			<p class="newsletter__description">
+				Suscribete para recibir nuevas recetas, consejos de cocina y articulos exclusivos cada
+				semana. Sin spam, solo sabor.
+			</p>
+		</div>
+
+		<!-- Formulario de suscripción -->
+		<form
+			class="newsletter__form"
+			id="newsletter-form"
+			action="#"
+			method="post"
+			novalidate
+		>
+			<div class="newsletter__form-group">
+				<div class="newsletter__field">
+					<label
+						for="newsletter-name"
+						class="newsletter__label"
+					>
+						Nombre
+					</label>
+					<input
+						type="text"
+						id="newsletter-name"
+						name="name"
+						class="newsletter__input"
+						placeholder="Tu nombre"
+						autocomplete="given-name"
+						required
+						aria-required="true"
+						aria-describedby="newsletter-name-error"
+					/>
+					<span
+						id="newsletter-name-error"
+						class="newsletter__error"
+						aria-live="polite"
+						role="alert"
+					></span>
+				</div>
+				<div class="newsletter__field">
+					<label
+						for="newsletter-email"
+						class="newsletter__label"
+					>
+						Correo electrónico
+					</label>
+					<input
+						type="email"
+						id="newsletter-email"
+						name="email"
+						class="newsletter__input"
+						placeholder="Tu correo electrónico"
+						autocomplete="email"
+						required
+						aria-required="true"
+						aria-describedby="newsletter-email-error"
+					/>
+					<span
+						id="newsletter-email-error"
+						class="newsletter__error"
+						aria-live="polite"
+						role="alert"
+					></span>
+				</div>
+			</div>
+
+			<div class="newsletter__consent">
+				<div class="newsletter__consent-field">
+					<input
+						type="checkbox"
+						id="newsletter-consent"
+						name="consent"
+						class="newsletter__checkbox"
+						required
+						aria-required="true"
+						aria-describedby="newsletter-consent-error"
+					/>
+					<label
+						for="newsletter-consent"
+						class="newsletter__consent-label"
+					>
+						Acepto recibir correos electrónicos con recetas y promociones y la
+						<a
+							href="#"
+							class="newsletter__consent-link"
+							>política de privacidad</a
+						>. Puedo cancelar mi suscripción en cualquier momento.
+					</label>
+				</div>
+				<span
+					id="newsletter-consent-error"
+					class="newsletter__error"
+					aria-live="polite"
+					role="alert"
+				></span>
+			</div>
+
+			<button
+				type="submit"
+				class="btn btn--primary btn--full newsletter__submit"
+			>
+				<i
+					class="fas fa-paper-plane icon-space-right"
+					aria-hidden="true"
+				></i>
+				Suscribirme a la newsletter
+			</button>
+		</form>
+		<div
+			class="newsletter__success"
+			id="newsletter-success"
+			aria-live="polite"
+			role="status"
+			hidden
+		>
+			<div
+				class="fas fa-check-circle icon--success icon-space-right"
+				aria-hidden="true"
+			></div>
+			<span>¡Gracias por suscribirte! Revisa tu correo para confirmar tu suscripción.</span>
+		</div>
+	</div>
+</section>
