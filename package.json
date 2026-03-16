@@ -6,7 +6,7 @@
 	"scripts": {
 		"start": "npm-run-all clean parcel:dev",
 		"build": "npm-run-all clean parcel:build",
-		"parcel:dev": "parcel src/pages/**/*.html",
+		"parcel:dev": "parcel src/pages/*.html src/pages/**/*.html",
 		"parcel:build": "parcel build src/pages/*.html src/pages/**/*.html",
 		"clean": "rimraf dist .parcel-cache"
 	},
