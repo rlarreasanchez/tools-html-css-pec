@@ -9,5 +9,23 @@
 	"category": "",
 	"duration": "",
 	"difficulty": "",
-	"rations": ""
+	"rations": "",
+	"contents": [
+		{
+			"type": "paragraph",
+			"text": ""
+		},
+		{
+			"type": "image",
+			"src": "",
+			"alt": "",
+			"caption": ""
+		},
+		{
+			"type": "video",
+			"src": "",
+			"title": "",
+			"caption": ""
+		}
+	]
 }

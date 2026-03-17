@@ -9,5 +9,43 @@
 	"category": "Postres",
 	"duration": "60 minutos",
 	"difficulty": "Media",
-	"rations": "6"
+	"rations": "6",
+	"contents": [
+		{
+			"type": "paragraph",
+			"text": "El <span lang=\"it\">tiramisu</span> es, sin duda, uno de los postres más reconocidos de la repostería italiana y del mundo entero. Aunque su origen exacto sigue siendo objeto de debate entre las regiones de Veneto y Friuli Venezia Giulia, lo que nadie discute es la perfección de su combinación de sabores: el amargor del café <span lang=\"it\">espresso</span>, la cremosidad del <span lang=\"it\">mascarpone</span>, la suavidad de las <span lang=\"it\">savoiardi</span> (bizcochos de soletilla) y el toque final de cacao amargo en polvo. En esta versión clásica, respetamos cada uno de los ingredientes originales sin aditivos ni atajos, tal y como se prepara en las cocinas familiares italianas desde hace décadas."
+		},
+		{
+			"type": "image",
+			"src": "recipe-2-content-1.jpg",
+			"alt": "Ingredientes del tiramisu dispuestos sobre superficie de mármol: mascarpone en un cuenco, huevos frescos, taza de café espresso, bizcochos savoiardi y cacao en polvo",
+			"caption": "Los ingredientes esenciales: <span lang=\"it\">mascarpone</span>, huevos, café <span lang=\"it\">espresso</span>, <span lang=\"it\">savoiardi</span> y cacao."
+		},
+		{
+			"type": "paragraph",
+			"text": "El secreto de un buen <span lang=\"it\">tiramisu</span> reside en la calidad de sus materias primas y en la técnica de montaje. Las yemas de huevo se baten con el azúcar hasta obtener una crema pálida y espumosa, a la que se incorpora el <span lang=\"it\">mascarpone</span> a temperatura ambiente con movimientos envolventes para no perder la aireación. Por separado, las claras se montan a punto de nieve firme y se integran con suavidad en la mezcla. Las <span lang=\"it\">savoiardi</span> se sumergen brevemente en el café <span lang=\"it\">espresso</span> enfriado, lo justo para que absorban el sabor sin deshacerse. Es un juego de texturas: húmedo y seco, cremoso y esponjoso, amargo y dulce."
+		},
+		{
+			"type": "image",
+			"src": "recipe-2-content-2.jpg",
+			"alt": "Sección transversal de un tiramisu mostrando las capas diferenciadas: bizcochos empapados en café, crema de mascarpone y cacao en polvo por encima, en fuente de cristal",
+			"caption": "Las capas del <span lang=\"it\">tiramisu</span>: bizcochos, crema y cacao, un equilibrio perfecto."
+		},
+		{
+			"type": "paragraph",
+			"text": "El montaje se realiza en una fuente rectangular, alternando capas de <span lang=\"it\">savoiardi</span> empapados y crema de <span lang=\"it\">mascarpone</span>, terminando siempre con una capa generosa de crema. El <span lang=\"it\">tiramisu</span> debe reposar en el frigorifico un minimo de cuatro horas, aunque alcanza su punto optimo tras una noche completa de reposo, cuando todos los sabores se han fundido y la textura adquiere esa consistencia sedosa tan caracteristica. Justo antes de servir, se espolvorea una capa uniforme de cacao amargo en polvo usando un colador fino. Cada porcion revela las capas estratificadas, y el primer bocado es una explosion de contrastes que resume lo mejor de la dulceria italiana."
+		},
+		{
+			"type": "image",
+			"src": "recipe-2-content-3.jpg",
+			"alt": "Porcion individual de tiramisu emplatada con elegancia en plato de postre blanco con espolvoreado de cacao, junto a una taza de café",
+			"caption": "El <span lang=\"it\">tiramisu</span> emplatado: un postre que entra por los ojos."
+		},
+		{
+			"type": "video",
+			"src": "https://www.youtube.com/embed/qy7dGoBukkc?si=PbCMazlKNWEH8vGf",
+			"title": "TIRAMISÚ ITALIANO Receta y paso a paso",
+			"caption": "Mira cómo se prepara el TIRAMISÚ ITALIANO paso a paso."
+		}
+	]
 }

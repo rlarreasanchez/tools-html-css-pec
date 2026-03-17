@@ -9,5 +9,11 @@
 	"category": "Sopas",
 	"duration": "20 minutos",
 	"difficulty": "Fácil",
-	"rations": "4"
+	"rations": "4",
+	"contents": [
+		{
+			"type": "paragraph",
+			"text": "El gazpacho andaluz es mucho más que una sopa fría; es un símbolo de la cultura gastronómica de Andalucía y un emblema de la cocina española en el mundo. Su origen se remonta a tiempos antiguos, cuando los campesinos andaluces comenzaron a preparar sopas frías con los ingredientes disponibles en sus tierras: tomates, pimientos, pepinos, ajo y aceite de oliva virgen extra. La elección de los ingredientes es fundamental: los tomates maduros, con su sabor intenso y jugoso, son el ingrediente clave para lograr la textura y el sabor perfectos. El gazpacho se sirve tradicionalmente frío, lo que aporta una sensación refrescante inconfundible y permite disfrutar de los sabores naturales de las verduras en su máxima expresión."
+		}
+	]
 }

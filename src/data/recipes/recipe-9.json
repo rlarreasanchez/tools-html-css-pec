@@ -9,5 +9,11 @@
 	"category": "Sopas",
 	"duration": "25 minutos",
 	"difficulty": "Fácil",
-	"rations": "4"
+	"rations": "4",
+	"contents": [
+		{
+			"type": "paragraph",
+			"text": "El salmorejo cordobés es mucho más que una sopa fría; es un símbolo de la cultura gastronómica de Córdoba y un emblema de la cocina española en el mundo. Su origen se remonta a tiempos antiguos, cuando los campesinos cordobeses comenzaron a preparar sopas frías con los ingredientes disponibles en sus tierras: tomates, pan, ajo y aceite de oliva virgen extra. La elección de los ingredientes es fundamental: los tomates maduros, el pan de calidad y el aceite de oliva virgen extra son los ingredientes clave para lograr la textura y el sabor perfectos. El salmorejo se sirve tradicionalmente frío, acompañado de huevo duro picado y jamón serrano, lo que aporta una combinación de sabores y texturas inconfundible."
+		}
+	]
 }

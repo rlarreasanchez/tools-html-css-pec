@@ -1,7 +1,7 @@
 {
 	"title": "Cannoli siciliani",
 	"title_html": "<span lang=\"it\">Cannoli siciliani</span>",
-	"description": "Deliciosos <span lang=\"it\">cannoli</span> rellenos de <span lang=\"it\">ricotta</span> dulce y decorados con pistachos triturados y chocolate rallado.",
+	"description": "Deliciosos cannoli rellenos de ricotta dulce y decorados con pistachos triturados y chocolate rallado.",
 	"description_html": "Deliciosos <span lang=\"it\">cannoli</span> rellenos de <span lang=\"it\">ricotta</span> dulce y decorados con pistachos triturados y chocolate rallado.",
 	"link_aria_label": "Leer receta completa de Cannoli siciliani",
 	"image": "recipe-8.jpg",
@@ -9,5 +9,11 @@
 	"category": "Postres",
 	"duration": "50 minutos",
 	"difficulty": "Media",
-	"rations": "6"
+	"rations": "6",
+	"contents": [
+		{
+			"type": "paragraph",
+			"text": "Los <span lang=\"it\">cannoli siciliani</span> son mucho más que un postre; son un símbolo de la cocina italiana y un emblema de la gastronomía europea en el mundo. Su origen se remonta a tiempos antiguos, cuando los pasteleros sicilianos comenzaron a preparar estos dulces con los ingredientes disponibles en sus tierras: masa crujiente, <span lang=\"it\">ricotta</span> dulce, pistachos y chocolate. La elección de los ingredientes es fundamental: la <span lang=\"it\">ricotta</span> fresca, los pistachos triturados y el chocolate rallado son los ingredientes clave para lograr la textura y el sabor perfectos. Los <span lang=\"it\">cannoli</span> se sirven tradicionalmente fríos, lo que permite disfrutar de los sabores naturales de la <span lang=\"it\">ricotta</span> en su máxima expresión."
+		}
+	]
 }

@@ -9,5 +9,11 @@
 	"category": "Pescado",
 	"duration": "35 minutos",
 	"difficulty": "Fácil",
-	"rations": "4"
+	"rations": "4",
+	"contents": [
+		{
+			"type": "paragraph",
+			"text": "El pescado al curry con leche de coco es mucho más que un plato de pescado; es un símbolo de la cocina internacional y un emblema de la fusión de sabores en el mundo. Su origen se remonta a tiempos antiguos, cuando los cocineros comenzaron a experimentar con especias y leche de coco para crear salsas aromáticas y cremosas. La elección de los ingredientes es fundamental: el pescado blanco fresco, la leche de coco y la pasta de curry son los ingredientes clave para lograr la textura y el sabor perfectos. El pescado se cocina tradicionalmente a fuego lento, lo que permite que los sabores se mezclen y se intensifiquen, creando una experiencia culinaria única y reconfortante."
+		}
+	]
 }

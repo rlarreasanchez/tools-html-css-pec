@@ -9,5 +9,11 @@
 	"category": "Pasta",
 	"duration": "30 minutos",
 	"difficulty": "Media",
-	"rations": "4"
+	"rations": "4",
+	"contents": [
+		{
+			"type": "paragraph",
+			"text": "La <span lang=\"it\">carbonara</span> es mucho más que un plato de pasta; es un símbolo de la cocina italiana y un emblema de la gastronomía europea en el mundo. Su origen se remonta a tiempos antiguos, cuando los campesinos italianos comenzaron a preparar pasta con los ingredientes disponibles en sus tierras: huevos, <span lang=\"it\">pecorino romano</span> y panceta. La elección de los ingredientes es fundamental: los huevos frescos, el <span lang=\"it\">pecorino romano</span> y la panceta crujiente son los ingredientes clave para lograr la textura y el sabor perfectos. La pasta se cocina tradicionalmente al dente, lo que permite que la salsa cremosa se adhiera perfectamente a cada hebra de <span lang=\"it\">spaguetti</span>."
+		}
+	]
 }

@@ -9,5 +9,43 @@
 	"category": "Pescado",
 	"duration": "30 minutos",
 	"difficulty": "Fácil",
-	"rations": "2"
+	"rations": "2",
+	"contents": [
+		{
+			"type": "paragraph",
+			"text": "El salmón a la plancha es una de esas preparaciones que demuestran que la gran cocina no necesita complicaciones: un producto excepcional, un punto de cocción preciso y unos acompañantes bien elegidos bastan para crear un plato memorable. En esta receta utilizamos filetes de salmón noruego de piscifactoría sostenible, una variedad apreciada por su textura firme, su contenido en ácidos grasos omega-3 y su sabor delicado que combina a la perfección con hierbas aromáticas frescas. El eneldo, protagonista indiscutible de esta preparación, aporta un matiz anisado y ligeramente cítrico que realza el pescado sin enmascarar su sabor natural."
+		},
+		{
+			"type": "image",
+			"src": "recipe-3-content-1.jpg",
+			"alt": "Filete de salmón crudo siendo sazonado con sal marina, pimienta negra y eneldo fresco sobre tabla de cortar de madera, con medios limones al lado",
+			"caption": "La preparación: sazonar el salmón con sal marina, pimienta y eneldo fresco."
+		},
+		{
+			"type": "paragraph",
+			"text": "La técnica de la plancha es fundamental para obtener un resultado perfecto. La sartén de hierro fundido o la plancha deben estar muy calientes antes de colocar el filete, siempre con la piel hacia abajo. Este primer contacto intenso sella la superficie del pescado, creando una costra dorada y crujiente que contrasta con el interior jugoso y apenas rosado. El salmón se cocina aproximadamente cuatro minutos por el lado de la piel y apenas dos por el otro, dejando que el calor residual termine la cocción en el plato. Es esencial resistir la tentación de mover el filete durante la cocción: la paciencia es la mejor aliada del cocinero. La salsa se prepara aparte, emulsionando zumo de limón recién exprimido con aceite de oliva virgen extra, eneldo picado, una pizca de mostaza de Dijon y ralladura de limón."
+		},
+		{
+			"type": "image",
+			"src": "recipe-3-content-2.jpg",
+			"alt": "Filete de salmón cocinándose en sartén de hierro fundido con la piel hacia abajo, marcas de la plancha visibles, hierbas aromáticas chisporroteando al lado y vapor ascendente",
+			"caption": "La plancha bien caliente sella el salmón, creando una costra dorada y crujiente."
+		},
+		{
+			"type": "paragraph",
+			"text": "El emplatado completa la experiencia gastronómica. El filete de salmón se presenta sobre una base de verduras asadas de temporada — espárragos verdes, tomates <span lang=\"en\">cherry</span> confitados y una quenelle de puré de coliflor — que aportan color, textura y un complemento nutricional equilibrado. La salsa de limón y eneldo se dispone con cuidado alrededor del salmón formando un espejo ligero, y unas ramitas de eneldo fresco coronan el plato. Es una preparación que se presta tanto a una cena elegante entre amigos como a una comida familiar del día a día, y que demuestra que comer sano y comer con placer no son conceptos excluyentes. La frescura del limón, la untuosidad del omega-3 y el perfume del eneldo conforman un trío armonioso que permanece en la memoria gustativa mucho después del último bocado."
+		},
+		{
+			"type": "image",
+			"src": "recipe-3-content-3.jpg",
+			"alt": "Filete de salmón a la plancha emplatado con elegancia sobre plato blanco de cerámica, acompañado de espárragos asados, tomates cherry y salsa de limón con eneldo, decorado con microbrotes",
+			"caption": "El emplatado final: salmón, verduras asadas y salsa de limón con eneldo."
+		},
+		{
+			"type": "video",
+			"src": "https://www.youtube.com/embed/rDOdXAm2RKg?si=SxAqMP5WqLCm5Bvf",
+			"title": "Cómo cocinar salmón a la plancha sin que se pegue",
+			"caption": "Mira cómo se prepara el Salmón a la plancha con eneldo paso a paso."
+		}
+	]
 }

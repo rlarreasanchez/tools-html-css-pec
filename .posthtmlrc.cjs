@@ -19,12 +19,16 @@ const pages = Array.from({ length: totalPages }, (_, i) => i + 1);
 // Extraer categorías únicas de las recetas
 const categories = [...new Set(recipes.map((recipe) => recipe.category))].sort();
 
-// Añadir índice y número de página a cada receta
+// Añadir información de paginación y enlaces a cada receta
 const recipesWithPagination = recipes.map((recipe, index) => ({
 	...recipe,
 	link: `/${RECIPES_SLUG}${index + 1}`,
 	index: index,
 	page: Math.floor(index / RECIPES_PER_PAGE) + 1,
+	nextLink: index < recipes.length - 1 ? `/${RECIPES_SLUG}${index + 2}` : null,
+	nextLinkTitle: index < recipes.length - 1 ? recipes[index + 1].title : null,
+	prevLink: index > 0 ? `/${RECIPES_SLUG}${index}` : null,
+	prevLinkTitle: index > 0 ? recipes[index - 1].title : null,
 	breadcrumb: [
 		{
 			name: "Inicio",

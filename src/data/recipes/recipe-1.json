@@ -9,5 +9,43 @@
 	"category": "Pasta",
 	"duration": "45 minutos",
 	"difficulty": "Media",
-	"rations": "4"
+	"rations": "4",
+	"contents": [
+		{
+			"type": "paragraph",
+			"text": "Las <span lang=\"it\">tagliatelle al tartufo</span> son uno de los platos más emblemáticos de la cocina italiana, especialmente de las regiones de Umbria y Piamonte, donde la trufa negra y blanca crecen de forma silvestre en los bosques de encina y roble durante los meses de otoño e invierno. Esta receta rinde homenaje a la tradición artesanal de la pasta fresca, elaborada exclusivamente con harina de trigo <span lang=\"it\">tipo 00</span>, huevos de gallinas camperas y una pizca de sal marina. El resultado es una masa sedosa, elástica y con un sabor profundo que se convierte en el lienzo perfecto para realzar el aroma inconfundible de la trufa."
+		},
+		{
+			"type": "image",
+			"src": "recipe-1-content-1.jpg",
+			"alt": "Tagliatelle de pasta fresca siendo cortados a mano sobre tabla de madera espolvoreada con harina",
+			"caption": "La pasta fresca se corta a mano para obtener la textura artesanal característica."
+		},
+		{
+			"type": "paragraph",
+			"text": "La clave de este plato reside en la sencillez de sus ingredientes y en el respeto por los tiempos de cada proceso. La masa debe reposar al menos treinta minutos antes de ser estirada con el rodillo de madera, una técnica que permite conservar la porosidad necesaria para que la salsa se adhiera a cada tira de pasta. La trufa negra se lamina en el último momento, justo antes de servir, para preservar su aroma volátil. Se prepara una emulsión sutil con mantequilla de calidad, un fondo ligero de <span lang=\"it\">parmigiano</span> y unas gotas de aceite de trufa que amplifica el sabor sin enmascarar la naturaleza del producto fresco."
+		},
+		{
+			"type": "image",
+			"src": "recipe-1-content-2.jpg",
+			"alt": "Trufa negra entera y laminas de trufa cortadas sobre tabla de madera rústica junto a un laminador de trufa",
+			"caption": "La trufa negra de temporada: el ingrediente estrella de este plato."
+		},
+		{
+			"type": "paragraph",
+			"text": "El emplatado es tan importante como la cocción. Las <span lang=\"it\">tagliatelle</span> se sirven en un plato hondo previamente calentado, enroscadas con elegancia usando un tenedor y un cucharón. La trufa laminada se dispone en el centro, creando un contraste visual entre el dorado de la pasta y el negro intenso del hongo. Un toque final de parmesano <span lang=\"it\">Reggiano</span> rallado al momento y unas hojas de perejil completan una presentación que evoca la cocina de las <span lang=\"it\">trattorie</span> más auténticas de la Italia rural. Es un plato que nos conecta con la tierra, con la temporada y con siglos de tradición gastronómica."
+		},
+		{
+			"type": "image",
+			"src": "recipe-1-content-3.jpg",
+			"alt": "Servicio elegante de tagliatelle con virutas de trufa añadidas desde arriba, vapor ascendente, ambiente de restaurante con velas",
+			"caption": "El momento del emplatado: las láminas de trufa se añaden justo antes de servir."
+		},
+		{
+			"type": "video",
+			"src": "https://www.youtube.com/embed/kTq5WYjfshs?si=BuI546r7ay0hPbQx",
+			"title": "Cómo hacer pasta para espaguetis y tallarines. Pasta fresca casera",
+			"caption": "Mira cómo se preparar pasta fresca casera paso a paso."
+		}
+	]
 }
