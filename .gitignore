@@ -9,3 +9,6 @@ node_modules/
 
 # Archivos de sistema y logs
 npm-debug.log*
+
+# Archivos generados de las recetas
+src/pages/det*.html

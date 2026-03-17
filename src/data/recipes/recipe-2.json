@@ -1,0 +1,13 @@
+{
+	"title": "Tiramisu clasico",
+	"title_html": "<span lang=\"it\">Tiramisu</span> clásico",
+	"description": "La receta tradicional italiana con mascarpone cremoso, café espresso y un toque de cacao amargo.",
+	"description_html": "La receta tradicional italiana con <span lang=\"it\">mascarpone</span> cremoso, café <span lang=\"it\">espresso</span> y un toque de cacao amargo.",
+	"link_aria_label": "Leer receta completa de Tiramisu clásico",
+	"image": "recipe-2.jpg",
+	"alt_image": "Tiramisu clásico",
+	"category": "Postres",
+	"duration": "60 minutos",
+	"difficulty": "Media",
+	"rations": "6"
+}

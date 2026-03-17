@@ -1,0 +1,13 @@
+{
+	"title": "Spaguetti a la carbonara",
+	"title_html": "<span lang=\"it\">Spaguetti</span> a la carbonara",
+	"description": "Pasta al dente con una salsa cremosa de huevo, queso pecorino romano y panceta crujiente.",
+	"description_html": "Pasta al dente con una salsa cremosa de huevo, queso <span lang=\"it\">pecorino</span> romano y panceta crujiente.",
+	"link_aria_label": "Leer receta completa de Spaguetti a la carbonara",
+	"image": "recipe-7.jpg",
+	"alt_image": "Spaguetti a la carbonara en un plato blanco con panceta crujiente y queso rallado por encima",
+	"category": "Pasta",
+	"duration": "30 minutos",
+	"difficulty": "Media",
+	"rations": "4"
+}

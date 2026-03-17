@@ -4,10 +4,11 @@
 	"type": "module",
 	"browserslist": "> 0.2%, last 10 years, not dead",
 	"scripts": {
-		"start": "npm-run-all clean parcel:dev",
-		"build": "npm-run-all clean parcel:build",
-		"parcel:dev": "parcel src/pages/*.html src/pages/**/*.html",
-		"parcel:build": "parcel build src/pages/*.html src/pages/**/*.html",
+		"generate:recipes": "node src/scripts/generate-recipes-pages.cjs",
+		"start": "npm-run-all clean generate:recipes parcel:dev",
+		"build": "npm-run-all clean generate:recipes parcel:build",
+		"parcel:dev": "parcel src/pages/*.html",
+		"parcel:build": "parcel build src/pages/*.html",
 		"clean": "rimraf dist .parcel-cache"
 	},
 	"keywords": [
@@ -35,6 +36,7 @@
 		"typescript": "^5.9.3"
 	},
 	"dependencies": {
-		"@fortawesome/fontawesome-free": "^7.2.0"
+		"@fortawesome/fontawesome-free": "^7.2.0",
+		"fast-glob": "^3.3.3"
 	}
 }

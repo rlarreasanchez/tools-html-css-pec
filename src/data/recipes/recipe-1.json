@@ -1,0 +1,13 @@
+{
+	"title": "Tagliatelle al tartufo",
+	"title_html": "<span lang=\"it\">Tagliatelle al tartufo</span>",
+	"description": "Pasta fresca hecha a mano con una delicada salsa de trufa negra de temporada y parmesano Reggiano.",
+	"description_html": "Pasta fresca hecha a mano con una delicada salsa de trufa negra de temporada y parmesano <span lang=\"it\">Reggiano</span>.",
+	"link_aria_label": "Leer receta completa de Tagliatelle al tartufo",
+	"image": "recipe-1.jpg",
+	"alt_image": "Plato de pasta tagliatelle con salsa de trufa, albahaca fresca y queso parmesano rallado sobre plato de cerámica",
+	"category": "Pasta",
+	"duration": "45 minutos",
+	"difficulty": "Media",
+	"rations": "4"
+}

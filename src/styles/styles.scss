@@ -19,6 +19,9 @@
 @use 'category-list';
 @use 'newsletter';
 
+// Layouts
+@use 'recipe-detail';
+
 *,
 *::before,
 *::after {

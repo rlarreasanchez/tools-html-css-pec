@@ -1,5 +1,14 @@
-const recipes = require("./src/data/recipes.json");
+const fg = require("fast-glob");
+const fs = require("fs");
+
 const { RECIPES_PER_PAGE } = require("./src/config/pagination.config.json");
+const { RECIPES_SLUG } = require("./src/config/recipes.config.json");
+
+// Cargar todas las recetas desde los archivos saltándose template.json
+const recipes = fg
+	.sync("src/data/recipes/*.json")
+	.filter((file) => !file.includes("template.json"))
+	.map((file) => JSON.parse(fs.readFileSync(file)));
 
 // Calcular el número total de páginas
 const totalPages = Math.ceil(recipes.length / RECIPES_PER_PAGE);
@@ -13,8 +22,24 @@ const categories = [...new Set(recipes.map((recipe) => recipe.category))].sort()
 // Añadir índice y número de página a cada receta
 const recipesWithPagination = recipes.map((recipe, index) => ({
 	...recipe,
+	link: `/${RECIPES_SLUG}${index + 1}`,
 	index: index,
 	page: Math.floor(index / RECIPES_PER_PAGE) + 1,
+	breadcrumb: [
+		{
+			name: "Inicio",
+			url: "/",
+			aria_label: "Ir a la página de inicio",
+		},
+		{
+			name: "Recetas",
+			url: "/categoria",
+			aria_label: "Ir a la página de recetas",
+		},
+		{
+			name: recipe.title,
+		},
+	],
 }));
 
 module.exports = {

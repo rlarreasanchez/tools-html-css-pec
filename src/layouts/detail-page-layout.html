@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<meta
+			name="description"
+			content="{{ description }}"
+		/>
+		<meta
+			name="theme-color"
+			content="#7C3A12"
+		/>
+		<title>Sabor y Tradicion - {{ title }}</title>
+		<link
+			rel="stylesheet"
+			href="/src/styles/styles.scss"
+		/>
+		<link
+			rel="preconnect"
+			href="https://fonts.googleapis.com"
+		/>
+		<link
+			rel="preconnect"
+			href="https://fonts.gstatic.com"
+			crossorigin
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Sans+3:wght@300;400;600;700&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<include src="partials/header.html"></include>
+
+		<main id="main-content">
+			<article
+				class="detail"
+				aria-labelledby="detail-title"
+			>
+				<div class="detail__hero">
+					<img
+						src="/src/images/{{ image }}"
+						alt="{{ alt_image }}"
+						class="detail__hero-image"
+						width="1200"
+						height="600"
+						loading="eager"
+					/>
+				</div>
+
+				<div class="detail__container">
+					<include
+						src="partials/breadcrumb.html"
+						locals='{ "breadcrumb": breadcrumb }'
+					></include>
+					<header class="detail__header">
+						<span class="section-label">{{ category }}</span>
+						<h1
+							id="detail-title"
+							class="detail__title"
+						>
+							{{{ title_html }}}
+						</h1>
+						<dl class="detail__meta">
+							<div class="detail__meta-item">
+								<dt>
+									<i
+										class="far fa-clock icon-space-right"
+										aria-hidden="true"
+									></i>
+									Tiempo de preparación
+								</dt>
+								<dd>{{ duration }}</dd>
+							</div>
+							<div class="detail__meta-item">
+								<dt>
+									<i
+										class="far fa-star icon-space-right"
+										aria-hidden="true"
+									></i>
+									Dificultad
+								</dt>
+								<dd>{{ difficulty }}</dd>
+							</div>
+							<div class="detail__meta-item">
+								<dt>
+									<i
+										class="fas fa-users icon-space-right"
+										aria-hidden="true"
+									></i>
+									Raciones
+								</dt>
+								<dd>{{ rations }} personas</dd>
+							</div>
+						</dl>
+					</header>
+				</div>
+			</article>
+		</main>
+
+		<include src="partials/footer.html"></include>
+
+		<script
+			type="module"
+			src="/src/ts/main.ts"
+		></script>
+	</body>
+</html>
