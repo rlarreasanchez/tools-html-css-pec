@@ -23,8 +23,8 @@ const baseDir = path.join("src", "pages");
 fs.mkdirSync(baseDir, { recursive: true });
 
 // Eliminar páginas antiguas
-const oldPages = fg.sync(path.join(baseDir, "det*.html"));
-oldPages.forEach((file) => fs.unlinkSync(file));
+const oldPages = fg.sync(`src/pages/${RECIPES_SLUG}*.html`);
+oldPages.forEach((file) => fs.unlinkSync(path.resolve(file)));
 
 // Generar una página HTML para cada receta
 recipes.forEach((_, index) => {
