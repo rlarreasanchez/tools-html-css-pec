@@ -19,6 +19,18 @@ const pages = Array.from({ length: totalPages }, (_, i) => i + 1);
 // Extraer categorías únicas de las recetas
 const categories = [...new Set(recipes.map((recipe) => recipe.category))].sort();
 
+// Breadcrumb para la página de recetas
+const categoriesBreadcrumb = [
+	{
+		name: "Inicio",
+		url: "/",
+		aria_label: "Ir a la página de inicio",
+	},
+	{
+		name: "Recetas",
+	},
+];
+
 // Añadir información de paginación y enlaces a cada receta
 const recipesWithPagination = recipes.map((recipe, index) => ({
 	...recipe,
@@ -48,6 +60,9 @@ const recipesWithPagination = recipes.map((recipe, index) => ({
 
 module.exports = {
 	plugins: {
+		"posthtml-extend": {
+			root: "src",
+		},
 		"posthtml-include": {
 			root: "src",
 		},
@@ -55,6 +70,7 @@ module.exports = {
 			locals: {
 				recipes: recipesWithPagination,
 				categories: categories,
+				breadcrumb: categoriesBreadcrumb,
 				pagination: {
 					totalPages,
 					pages,

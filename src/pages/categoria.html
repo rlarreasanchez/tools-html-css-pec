@@ -1,183 +1,125 @@
-<!doctype html>
-<html lang="es">
-	<head>
-		<meta charset="UTF-8" />
-		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1.0"
-		/>
-		<meta
-			name="description"
-			content="Explora nuestra coleccion de recetas artesanales: pasta, pescado, postres y mucho mas. Cocina de autor con ingredientes de proximidad."
-		/>
-		<meta
-			name="theme-color"
-			content="#7C3A12"
-		/>
-		<title>Sabor y Tradicion - Recetas</title>
-		<link
-			rel="stylesheet"
-			href="../styles/styles.scss"
-		/>
-		<link
-			rel="preconnect"
-			href="https://fonts.googleapis.com"
-		/>
-		<link
-			rel="preconnect"
-			href="https://fonts.gstatic.com"
-			crossorigin
-		/>
-		<link
-			href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Sans+3:wght@300;400;600;700&display=swap"
-			rel="stylesheet"
-		/>
-	</head>
-	<script
-		locals
-		type="module"
-	>
-		module.exports = {
-			breadcrumb: [
-				{
-					name: "Inicio",
-					url: "/",
-					aria_label: "Ir a la página de inicio",
-				},
-				{
-					name: "Recetas",
-				},
-			],
-		};
-	</script>
-	<body>
-		<include src="partials/header.html"></include>
+<extends
+	src="layouts/site-page-layout.html"
+	locals='{"title": "Recetas", "description": "Explora nuestra coleccion de recetas artesanales: pasta, pescado, postres y mucho mas. Cocina de autor con ingredientes de proximidad."}'
+>
+	<block name="content">
+		<!-- Header / Breadcrumbs -->
+		<section
+			class="page-header page-header--small"
+			aria-labelledby="page-title"
+		>
+			<div class="page-header__container">
+				<include
+					src="partials/breadcrumb.html"
+					locals="breadcrumb"
+				></include>
+				<h1
+					id="page-title"
+					class="page-header__title"
+				>
+					Nuestras Recetas
+				</h1>
+				<p class="page-header__subtitle">
+					Explora nuestra coleccion completa de recetas artesanales, organizadas por temporada y
+					tipo de cocina.
+				</p>
+			</div>
+		</section>
 
-		<main id="main-content">
-			<!-- Header / Breadcrumbs -->
-			<section
-				class="page-header page-header--small"
-				aria-labelledby="page-title"
-			>
-				<div class="page-header__container">
-					<include
-						src="partials/breadcrumb.html"
-						locals="breadcrumb"
-					></include>
-					<h1
-						id="page-title"
-						class="page-header__title"
-					>
-						Nuestras Recetas
-					</h1>
-					<p class="page-header__subtitle">
-						Explora nuestra coleccion completa de recetas artesanales, organizadas por temporada y
-						tipo de cocina.
-					</p>
-				</div>
-			</section>
+		<!-- Listado de recetas -->
+		<section
+			class="category-list"
+			id="category-list"
+			aria-label="Listado de recetas"
+			aria-labelledby="category-list-title"
+		>
+			<div class="category-list__container">
+				<h2
+					id="category-list-title"
+					class="category-list__title"
+				>
+					Listado de Recetas
+				</h2>
 
-			<section
-				class="category-list"
-				id="category-list"
-				aria-label="Listado de recetas"
-				aria-labelledby="category-list-title"
-			>
-				<div class="category-list__container">
-					<h2
-						id="category-list-title"
-						class="category-list__title"
-					>
-						Listado de Recetas
-					</h2>
-
-					<!-- Filtros de categorías -->
-					<div
-						class="category-filters"
-						role="group"
-						aria-label="Filtros de categorías"
-					>
-						<h3 class="category-filters__title">Filtrar por categoría:</h3>
-						<div class="category-filters__buttons">
-							<each loop="category in categories">
-								<button
-									class="category-filters__button"
-									data-category="{{ category }}"
-									type="button"
-									aria-label="Filtrar por {{ category }}"
-								>
-									{{ category }}
-								</button>
-							</each>
+				<!-- Filtros de categorías -->
+				<div
+					class="category-filters"
+					role="group"
+					aria-label="Filtros de categorías"
+				>
+					<h3 class="category-filters__title">Filtrar por categoría:</h3>
+					<div class="category-filters__buttons">
+						<each loop="category in categories">
 							<button
-								class="category-filters__clear"
-								id="clear-filters-btn"
+								class="category-filters__button"
+								data-category="{{ category }}"
 								type="button"
-								aria-label="Limpiar todos los filtros"
+								aria-label="Filtrar por {{ category }}"
 							>
-								<i
-									class="fas fa-times"
-									aria-hidden="true"
-								></i>
-								Limpiar
+								{{ category }}
 							</button>
-						</div>
+						</each>
+						<button
+							class="category-filters__clear"
+							id="clear-filters-btn"
+							type="button"
+							aria-label="Limpiar todos los filtros"
+						>
+							<i
+								class="fas fa-times"
+								aria-hidden="true"
+							></i>
+							Limpiar
+						</button>
 					</div>
+				</div>
 
-					<ul
-						class="category-list__grid"
-						id="category-grid"
-						role="list"
-					>
-						<each loop="recipe in recipes">
-							<li
-								class="category__item"
-								data-page="{{ recipe.page }}"
-								data-index="{{ recipe.index }}"
-								data-category="{{ recipe.category }}"
+				<ul
+					class="category-list__grid"
+					id="category-grid"
+					role="list"
+				>
+					<each loop="recipe in recipes">
+						<li
+							class="category__item"
+							data-page="{{ recipe.page }}"
+							data-index="{{ recipe.index }}"
+							data-category="{{ recipe.category }}"
+						>
+							<include
+								src="partials/recipe-card.html"
+								locals="recipe"
 							>
-								<include
-									src="partials/recipe-card.html"
-									locals="recipe"
+							</include>
+						</li>
+					</each>
+				</ul>
+
+				<nav
+					class="category-list__pagination"
+					aria-label="Paginación de recetas"
+					id="pagination-nav"
+				>
+					<ul
+						class="pagination"
+						role="list"
+						id="pagination-list"
+					>
+						<each loop="page in pagination.pages">
+							<li class="pagination__item">
+								<button
+									class="pagination__link"
+									data-page="{{ page }}"
+									aria-label="Página {{ page }}"
+									type="button"
 								>
-								</include>
+									{{ page }}
+								</button>
 							</li>
 						</each>
 					</ul>
-
-					<nav
-						class="category-list__pagination"
-						aria-label="Paginación de recetas"
-						id="pagination-nav"
-					>
-						<ul
-							class="pagination"
-							role="list"
-							id="pagination-list"
-						>
-							<each loop="page in pagination.pages">
-								<li class="pagination__item">
-									<button
-										class="pagination__link"
-										data-page="{{ page }}"
-										aria-label="Página {{ page }}"
-										type="button"
-									>
-										{{ page }}
-									</button>
-								</li>
-							</each>
-						</ul>
-					</nav>
-				</div>
-			</section>
-		</main>
-
-		<include src="partials/footer.html"></include>
-
-		<script
-			type="module"
-			src="../ts/main.ts"
-		></script>
-	</body>
-</html>
+				</nav>
+			</div>
+		</section>
+	</block>
+</extends>

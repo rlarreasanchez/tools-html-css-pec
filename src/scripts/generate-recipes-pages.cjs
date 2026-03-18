@@ -27,17 +27,24 @@ const oldPages = fg.sync(`src/pages/${RECIPES_SLUG}*.html`);
 oldPages.forEach((file) => fs.unlinkSync(path.resolve(file)));
 
 // Generar una página HTML para cada receta
-recipes.forEach((_, index) => {
+recipes.forEach((recipe, index) => {
 	const slug = RECIPES_SLUG + (index + 1);
 	const filePath = path.join(baseDir, `${slug}.html`);
 
-	const html = `<each loop="recipe in recipes">
-	<if condition="recipe.link === '/${slug}'">
-		<scope with="recipe">
-			<include src="layouts/detail-page-layout.html"></include>
-		</scope>
-	</if>
-</each>
+	const html = `<extends
+			src="layouts/site-page-layout.html"
+			locals='{"title": "${recipe.title}", "description": "${recipe.description}"}'
+		>
+	<block name="content">
+		<each loop="recipe in recipes">
+			<if condition="recipe.link === '/${slug}'">
+				<scope with="recipe">
+					<include src="partials/recipe-detail.html"></include>
+				</scope>
+			</if>
+		</each>
+	</block>
+</extends>
 `;
 
 	fs.writeFileSync(filePath, html);

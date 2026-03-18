@@ -1,0 +1,176 @@
+<article
+	class="detail"
+	aria-labelledby="detail-title"
+>
+	<div class="detail__hero">
+		<img
+			src="/src/images/{{ image }}"
+			alt="{{ alt_image }}"
+			class="detail__hero-image"
+			width="1200"
+			height="600"
+			loading="eager"
+		/>
+	</div>
+
+	<div class="detail__container">
+		<include
+			src="partials/breadcrumb.html"
+			locals='{ "breadcrumb": breadcrumb }'
+		></include>
+		<header class="detail__header">
+			<span class="section-label">{{ category }}</span>
+			<h1
+				id="detail-title"
+				class="detail__title"
+			>
+				{{{ title_html }}}
+			</h1>
+			<dl class="detail__meta">
+				<div class="detail__meta-item">
+					<dt>
+						<i
+							class="far fa-clock icon-space-right"
+							aria-hidden="true"
+						></i>
+						Tiempo de preparación
+					</dt>
+					<dd>{{ duration }}</dd>
+				</div>
+				<div class="detail__meta-item">
+					<dt>
+						<i
+							class="far fa-star icon-space-right"
+							aria-hidden="true"
+						></i>
+						Dificultad
+					</dt>
+					<dd>{{ difficulty }}</dd>
+				</div>
+				<div class="detail__meta-item">
+					<dt>
+						<i
+							class="fas fa-users icon-space-right"
+							aria-hidden="true"
+						></i>
+						Raciones
+					</dt>
+					<dd>{{ rations }} personas</dd>
+				</div>
+			</dl>
+		</header>
+
+		<div class="detail__body">
+			<each loop="content in contents">
+				<if condition="content.type === 'paragraph'">
+					<p>{{{ content.text }}}</p>
+				</if>
+				<if condition="content.type === 'image'">
+					<figure
+						class="detail__figure"
+						data-aos="fade-up"
+						data-aos-delay="200"
+					>
+						<img
+							class="detail__image"
+							src="/src/images/{{ content.src }}"
+							alt="{{ content.alt }}"
+							width="800"
+							height="500"
+							loading="lazy"
+						/>
+						<figcaption class="detail__caption">{{{ content.caption }}}</figcaption>
+					</figure>
+				</if>
+				<if condition="content.type === 'video'">
+					<figure
+						class="detail__video"
+						data-aos="zoom-in"
+						data-aos-delay="100"
+					>
+						<h2 class="detail__video-title">Video: {{ content.title }}</h2>
+						<div class="detail__video-wrapper">
+							<iframe
+								width="560"
+								height="315"
+								src="{{ content.src }}"
+								title="Video tutorial: {{ content.title }}"
+								frameborder="0"
+								loading="lazy"
+								allow="
+									accelerometer;
+									autoplay;
+									clipboard-write;
+									encrypted-media;
+									gyroscope;
+									picture-in-picture;
+									web-share;
+								"
+								referrerpolicy="strict-origin-when-cross-origin"
+								allowfullscreen
+							></iframe>
+						</div>
+						<figcaption class="detail__caption">{{{ content.caption }}}</figcaption>
+					</figure>
+				</if>
+			</each>
+			<nav
+				class="detail__pagination"
+				aria-label="Navegacion entre recetas"
+			>
+				<if condition="prevLink">
+					<a
+						href="{{ prevLink }}"
+						class="detail__pagination-link detail__pagination-link--prev"
+					>
+						<i
+							class="fas fa-chevron-left icon-chevron-left"
+							aria-hidden="true"
+						></i>
+						<span class="detail__pagination-label">Receta anterior</span>
+						<span class="detail__pagination-title">{{ prevLinkTitle }}</span>
+					</a>
+				</if>
+				<else>
+					<a
+						href="/categoria"
+						class="detail__pagination-link detail__pagination-link--prev"
+					>
+						<i
+							class="fas fa-chevron-left icon-chevron-left"
+							aria-hidden="true"
+						></i>
+						<span class="detail__pagination-label">Volver a</span>
+						<span class="detail__pagination-title">Todas las recetas</span>
+					</a>
+				</else>
+				<if condition="nextLink">
+					<a
+						href="{{ nextLink }}"
+						class="detail__pagination-link detail__pagination-link--next"
+					>
+						<span class="detail__pagination-label">Siguiente receta</span>
+						<span class="detail__pagination-title">{{ nextLinkTitle }}</span>
+						<i
+							class="fas fa-chevron-right icon-chevron-right"
+							aria-hidden="true"
+						></i>
+					</a>
+				</if>
+				<else>
+					<a
+						href="/categoria"
+						class="detail__pagination-link detail__pagination-link--next"
+					>
+						<span class="detail__pagination-label">Volver a</span>
+						<span class="detail__pagination-title">Todas las recetas</span>
+						<i
+							class="fas fa-chevron-right icon-chevron-right"
+							aria-hidden="true"
+						></i>
+					</a>
+				</else>
+			</nav>
+		</div>
+	</div>
+</article>
