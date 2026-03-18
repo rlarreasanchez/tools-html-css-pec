@@ -22,14 +22,21 @@
 
   &__grid {
     display: grid;
-    max-width: $container-max-width;
-    margin: 0 auto;
-    padding: 0 $container-padding;
+    grid-template-columns: 1fr;
     gap: $space-2xl;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+    @media (min-width: $breakpoint-md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
 
     @media (min-width: $breakpoint-lg) {
-      gap: $space-3xl;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    &.swiper-wrapper {
+      display: flex;
+      grid-template-columns: unset;
+      gap: 0;
     }
   }
 }

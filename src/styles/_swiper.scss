@@ -1,0 +1,61 @@
+@use 'variables' as *;
+
+.recipes-swiper {
+  position: relative;
+  padding: $space-xl 0;
+  margin: 0 auto;
+  width: 100%;
+  overflow: hidden;
+
+  .swiper-wrapper {
+    align-items: stretch;
+    display: flex;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    transition-property: transform;
+    box-sizing: content-box;
+  }
+
+  .swiper-slide {
+    height: auto;
+    display: flex !important;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    position: relative;
+    transition-property: transform;
+    align-self: stretch;
+  }
+
+  // Paginación
+  .swiper-pagination {
+    position: relative;
+    bottom: auto;
+    margin-top: $space-2xl;
+  }
+
+  .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background-color: $color-muted-light;
+    opacity: 1;
+    transition: all 0.3s;
+
+    &:hover {
+      transform: scale(1.2);
+      background-color: $color-primary-dark;
+    }
+
+    &:focus-visible {
+      outline: 2px solid $color-primary-dark;
+      outline-offset: 4px;
+    }
+  }
+
+  .swiper-pagination-bullet-active {
+    width: 24px;
+    background-color: $color-primary;
+    border-radius: 5px;
+  }
+}
+

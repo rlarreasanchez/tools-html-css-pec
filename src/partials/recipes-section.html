@@ -17,15 +17,20 @@
 				frescos y de proximidad
 			</p>
 		</div>
-	</div>
 
-	<div class="recipes__grid">
-		<each loop="recipe in recipes.slice(0, 6)">
-			<include
-				src="partials/recipe-card.html"
-				locals="recipe"
-			>
-			</include>
-		</each>
+		<div class="recipes-swiper swiper">
+			<ul class="recipes__grid swiper-wrapper">
+				<each loop="recipe in recipes.slice(0, 6)">
+					<li class="swiper-slide">
+						<include
+							src="partials/recipe-card.html"
+							locals="recipe"
+						>
+						</include>
+					</li>
+				</each>
+			</ul>
+			<div class="swiper-pagination"></div>
+		</div>
 	</div>
 </section>
