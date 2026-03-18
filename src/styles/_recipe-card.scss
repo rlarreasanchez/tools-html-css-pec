@@ -93,10 +93,8 @@
   }
 
   &__meta-item {
-    dd {
-      font-size: $font-size-sm;
-      font-weight: $font-weight-bold;
-      color: $color-muted;
-    }
+    font-size: $font-size-sm;
+    font-weight: $font-weight-bold;
+    color: $color-muted;
   }
 }
