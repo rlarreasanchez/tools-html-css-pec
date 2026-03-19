@@ -3,6 +3,23 @@
 	locals='{"title": "Recetas", "description": "Explora nuestra coleccion de recetas artesanales: pasta, pescado, postres y mucho mas. Cocina de autor con ingredientes de proximidad."}'
 >
 	<block name="content">
+		<script
+			locals
+			type="module"
+		>
+			module.exports = {
+				breadcrumb: [
+					{
+						name: "Inicio",
+						url: "/",
+						aria_label: "Ir a la página de inicio",
+					},
+					{
+						name: "Recetas",
+					},
+				],
+			};
+		</script>
 		<!-- Header / Breadcrumbs -->
 		<section
 			class="page-header page-header--small"
