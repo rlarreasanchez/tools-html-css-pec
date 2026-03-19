@@ -1,6 +1,44 @@
 <extends
 	src="layouts/site-page-layout.html"
-	locals='{"title": "Enlaces", "description": "Enlaces, fuentes y atribuciones del contenido de Sabor y Tradicion. Documentacion de recursos, derechos utilizados."}'
+	locals='{"title": "Enlaces y Atribuciones", "description": "Enlaces, fuentes y atribuciones del contenido de Sabor y Tradicion. Documentacion de recursos, derechos utilizados."}'
 >
-	<block name="content"></block>
+	<block name="content">
+		<script
+			locals
+			type="module"
+		>
+			module.exports = {
+				breadcrumb: [
+					{ name: "Inicio", url: "/", aria_label: "Ir a la página de inicio" },
+					{
+						name: "Enlaces y Atribuciones",
+					},
+				],
+			};
+		</script>
+		<!-- Header / Breadcrumbs -->
+		<section
+			class="page-header page-header--small"
+			aria-labelledby="page-title"
+		>
+			<div class="page-header__container">
+				<include
+					src="partials/breadcrumb.html"
+					locals="breadcrumb"
+				></include>
+				<h1
+					id="page-title"
+					class="page-header__title"
+				>
+					Enlaces y Atribuciones
+				</h1>
+				<p class="page-header__subtitle">
+					En esta página encontrarás enlaces a recursos, fuentes y atribuciones relacionadas con el
+					contenido de Sabor y Tradición. Aquí se documentan los recursos utilizados, los derechos
+					de autor y las fuentes de inspiración que han contribuido a la creación de nuestro sitio
+					web.
+				</p>
+			</div>
+		</section>
+	</block>
 </extends>
