@@ -10,7 +10,7 @@
 @use 'recipe-card';
 @use 'swiper';
 
-// Secciones
+// Secciones y páginas
 @use 'header';
 @use 'about';
 @use 'footer';
@@ -19,6 +19,7 @@
 @use 'page-header';
 @use 'category-list';
 @use 'newsletter';
+@use 'links';
 
 // Layouts
 @use 'recipe-detail';
@@ -39,4 +40,9 @@ ol {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+abbr {
+  text-decoration: underline dotted;
+  cursor: help;
 }
