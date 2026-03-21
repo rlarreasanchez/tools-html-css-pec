@@ -1,11 +1,11 @@
 {
-	"title": "Tiramisu clasico",
-	"title_html": "<span lang=\"it\">Tiramisu</span> clásico",
+	"title": "Tiramisú clásico",
+	"title_html": "<span lang=\"it\">Tiramisú</span> clásico",
 	"description": "La receta tradicional italiana con mascarpone cremoso, café espresso y un toque de cacao amargo.",
 	"description_html": "La receta tradicional italiana con <span lang=\"it\">mascarpone</span> cremoso, café <span lang=\"it\">espresso</span> y un toque de cacao amargo.",
-	"link_aria_label": "Leer receta completa de Tiramisu clásico",
+	"link_aria_label": "Leer receta completa de Tiramisú clásico",
 	"image": "recipe-2.jpg",
-	"alt_image": "Tiramisu clásico",
+	"alt_image": "Tiramisú clásico",
 	"category": "Postres",
 	"duration": "60 minutos",
 	"difficulty": "Media",
@@ -23,29 +23,59 @@
 		},
 		{
 			"type": "paragraph",
-			"text": "El secreto de un buen <span lang=\"it\">tiramisu</span> reside en la calidad de sus materias primas y en la técnica de montaje. Las yemas de huevo se baten con el azúcar hasta obtener una crema pálida y espumosa, a la que se incorpora el <span lang=\"it\">mascarpone</span> a temperatura ambiente con movimientos envolventes para no perder la aireación. Por separado, las claras se montan a punto de nieve firme y se integran con suavidad en la mezcla. Las <span lang=\"it\">savoiardi</span> se sumergen brevemente en el café <span lang=\"it\">espresso</span> enfriado, lo justo para que absorban el sabor sin deshacerse. Es un juego de texturas: húmedo y seco, cremoso y esponjoso, amargo y dulce."
+			"text": "El secreto de un buen <span lang=\"it\">tiramisú</span> reside en la calidad de sus materias primas y en la técnica de montaje. Las yemas de huevo se baten con el azúcar hasta obtener una crema pálida y espumosa, a la que se incorpora el <span lang=\"it\">mascarpone</span> a temperatura ambiente con movimientos envolventes para no perder la aireación. Por separado, las claras se montan a punto de nieve firme y se integran con suavidad en la mezcla. Las <span lang=\"it\">savoiardi</span> se sumergen brevemente en el café <span lang=\"it\">espresso</span> enfriado, lo justo para que absorban el sabor sin deshacerse. Es un juego de texturas: húmedo y seco, cremoso y esponjoso, amargo y dulce."
 		},
 		{
 			"type": "image",
 			"src": "recipe-2-content-2.jpg",
-			"alt": "Sección transversal de un tiramisu mostrando las capas diferenciadas: bizcochos empapados en café, crema de mascarpone y cacao en polvo por encima, en fuente de cristal",
-			"caption": "Las capas del <span lang=\"it\">tiramisu</span>: bizcochos, crema y cacao, un equilibrio perfecto."
+			"alt": "Sección transversal de un tiramisú mostrando las capas diferenciadas: bizcochos empapados en café, crema de mascarpone y cacao en polvo por encima, en fuente de cristal",
+			"caption": "Las capas del <span lang=\"it\">tiramisú</span>: bizcochos, crema y cacao, un equilibrio perfecto."
 		},
 		{
 			"type": "paragraph",
-			"text": "El montaje se realiza en una fuente rectangular, alternando capas de <span lang=\"it\">savoiardi</span> empapados y crema de <span lang=\"it\">mascarpone</span>, terminando siempre con una capa generosa de crema. El <span lang=\"it\">tiramisu</span> debe reposar en el frigorifico un minimo de cuatro horas, aunque alcanza su punto optimo tras una noche completa de reposo, cuando todos los sabores se han fundido y la textura adquiere esa consistencia sedosa tan caracteristica. Justo antes de servir, se espolvorea una capa uniforme de cacao amargo en polvo usando un colador fino. Cada porcion revela las capas estratificadas, y el primer bocado es una explosion de contrastes que resume lo mejor de la dulceria italiana."
+			"text": "El montaje se realiza en una fuente rectangular, alternando capas de <span lang=\"it\">savoiardi</span> empapados y crema de <span lang=\"it\">mascarpone</span>, terminando siempre con una capa generosa de crema. El <span lang=\"it\">tiramisú</span> debe reposar en el frigorifico un minimo de cuatro horas, aunque alcanza su punto optimo tras una noche completa de reposo, cuando todos los sabores se han fundido y la textura adquiere esa consistencia sedosa tan caracteristica. Justo antes de servir, se espolvorea una capa uniforme de cacao amargo en polvo usando un colador fino. Cada porcion revela las capas estratificadas, y el primer bocado es una explosion de contrastes que resume lo mejor de la dulceria italiana."
 		},
 		{
 			"type": "image",
 			"src": "recipe-2-content-3.jpg",
-			"alt": "Porcion individual de tiramisu emplatada con elegancia en plato de postre blanco con espolvoreado de cacao, junto a una taza de café",
-			"caption": "El <span lang=\"it\">tiramisu</span> emplatado: un postre que entra por los ojos."
+			"alt": "Porcion individual de tiramisú emplatada con elegancia en plato de postre blanco con espolvoreado de cacao, junto a una taza de café",
+			"caption": "El <span lang=\"it\">tiramisú</span> emplatado: un postre que entra por los ojos."
 		},
 		{
 			"type": "video",
 			"src": "https://www.youtube.com/embed/qy7dGoBukkc?si=PbCMazlKNWEH8vGf",
 			"title": "TIRAMISÚ ITALIANO Receta y paso a paso",
 			"caption": "Mira cómo se prepara el TIRAMISÚ ITALIANO paso a paso."
+		}
+	],
+	"attributions": [
+		{
+			"image": "Tiramisú clásico",
+			"author_name": "Slava_web-designer",
+			"author_url": "https://pixabay.com/es/users/slava_web-designer-39623293/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8503073",
+			"source_name": "Pixabay",
+			"source_url": "https://pixabay.com/es/photos/tiramisu-postre-pastel-comida-8503073/"
+		},
+		{
+			"image": "Tiramisú clásico - Contenido 1",
+			"author_name": "sontung57",
+			"author_url": "https://pixabay.com/es/users/sontung57-19733131/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=5880136",
+			"source_name": "Pixabay",
+			"source_url": "https://pixabay.com/es/photos/cocinando-ingredientes-endecha-plana-5880136/"
+		},
+		{
+			"image": "Tiramisú clásico - Contenido 2",
+			"author_name": "Rasa Kasparaviciene",
+			"author_url": "https://unsplash.com/es/@gervele?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText",
+			"source_name": "Unsplash",
+			"source_url": "https://unsplash.com/es/fotos/un-pedazo-de-pastel-en-un-plato-con-bayas-tAW0OPqDhuI?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+		},
+		{
+			"image": "Tiramisú clásico - Contenido 3",
+			"author_name": "Olga Petnyunene",
+			"author_url": "https://unsplash.com/es/@12tones?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText",
+			"source_name": "Unsplash",
+			"source_url": "https://unsplash.com/es/fotos/un-primer-plano-de-un-postre-en-un-plato-b5YTiVuWQH8?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
 		}
 	]
 }

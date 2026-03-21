@@ -47,5 +47,35 @@
 			"title": "Cómo hacer pasta para espaguetis y tallarines. Pasta fresca casera",
 			"caption": "Mira cómo se preparar pasta fresca casera paso a paso."
 		}
+	],
+	"attributions": [
+		{
+			"image": "Tagliatelle al tartufo",
+			"author_name": "Rashnaz",
+			"author_url": "https://pixabay.com/es/users/rashnaz-45311674/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9637406",
+			"source_name": "Pixabay",
+			"source_url": "https://pixabay.com/es/illustrations/pasta-comida-fideos-italiano-cena-9637406/"
+		},
+		{
+			"image": "Tagliatelle al tartufo - Contenido 1",
+			"author_name": "Hailey Tong",
+			"author_url": "https://unsplash.com/es/@haileytong?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText",
+			"source_name": "Unsplash",
+			"source_url": "https://unsplash.com/es/fotos/una-persona-en-una-cocina-cortando-algo-de-comida-5uXwAHi1kz0?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+		},
+		{
+			"image": "Tagliatelle al tartufo - Contenido 2",
+			"author_name": "CHUTTERSNAP",
+			"author_url": "https://unsplash.com/es/@chuttersnap?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText",
+			"source_name": "Unsplash",
+			"source_url": "https://unsplash.com/es/fotos/piedras-marrones-sobre-superficie-de-madera-marron-FqIhSU2Plko?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+		},
+		{
+			"image": "Tagliatelle al tartufo - Contenido 3",
+			"author_name": "Vincent Dörig",
+			"author_url": "https://unsplash.com/es/@vincentdoerig?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText",
+			"source_name": "Unsplash",
+			"source_url": "https://unsplash.com/es/fotos/un-plato-de-pasta-con-albondigas-y-un-cuchillo--iPCD8Rpve4?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+		}
 	]
 }

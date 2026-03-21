@@ -100,56 +100,81 @@
 							class="links__subsection-title"
 							id="hero-image-title"
 						>
-							Imagen Principal (Hero)
+							Imagen Principal (Portada)
 						</h3>
-						<table
-							class="links__table"
-							aria-labelledby="hero-image-title"
+						<script
+							locals
+							type="module"
 						>
-							<caption class="links__table-caption">
-								Atribución de la imagen principal de la portada
-							</caption>
-							<thead>
-								<tr>
-									<th scope="col">Imagen</th>
-									<th scope="col">Autor</th>
-									<th scope="col">Fuente</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td data-label="Imagen">Portada</td>
-									<td data-label="Autor">
-										<a
-											href="https://unsplash.com/es/@stefanjonhson?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-											target="_blank"
-											rel="noopener noreferrer"
-											class="links__external-link"
-										>
-											Stefan Johnson
-											<i
-												class="fas fa-external-link-alt"
-												aria-hidden="true"
-											></i>
-										</a>
-									</td>
-									<td data-label="Fuente">
-										<a
-											href="https://unsplash.com/es/fotos/frutas-mixtas-servidas-en-platos-de-ceramica-xIFbDeGcy44?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-											target="_blank"
-											rel="noopener noreferrer"
-											class="links__external-link"
-										>
-											Unsplash
-											<i
-												class="fas fa-external-link-alt"
-												aria-hidden="true"
-											></i>
-										</a>
-									</td>
-								</tr>
-							</tbody>
-						</table>
+							module.exports = {
+								heroAttributions: {
+									labelledby: "hero-image-title",
+									caption: "Atribución de la imagen principal de la portada",
+									attributions: [
+										{
+											image: "Portada",
+											author_name: "Stefan Johnson",
+											author_url:
+												"https://unsplash.com/es/@stefanjonhson?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText",
+											source_name: "Unsplash",
+											source_url:
+												"https://unsplash.com/es/fotos/frutas-mixtas-servidas-en-platos-de-ceramica-xIFbDeGcy44?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText",
+										},
+									],
+								},
+							};
+						</script>
+						<scope with="heroAttributions">
+							<include src="partials/links-table.html"></include>
+						</scope>
+					</div>
+
+					<!-- Imagen Sobre Nosotros -->
+					<div class="links__subsection">
+						<h3
+							class="links__subsection-title"
+							id="about-image-title"
+						>
+							Imagen de la sección "Sobre Nosotros"
+						</h3>
+						<script
+							locals
+							type="module"
+						>
+							module.exports = {
+								aboutAttributions: {
+									labelledby: "about-image-title",
+									caption: "Atribución de la imagen utilizada en la sección 'Sobre Nosotros'",
+									attributions: [
+										{
+											image: "Sobre Nosotros",
+											author_name: "giulioperricone",
+											author_url:
+												"https://pixabay.com/es/users/giulioperricone-6466513/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=4310465",
+											source_name: "Pixabay",
+											source_url:
+												"https://pixabay.com/es/photos/harina-masa-amasar-cocina-comida-4310465/",
+										},
+									],
+								},
+							};
+						</script>
+						<scope with="aboutAttributions">
+							<include src="partials/links-table.html"></include>
+						</scope>
+					</div>
+
+					<!-- Imágenes de Recetas -->
+					<div class="links__subsection">
+						<h3
+							class="links__subsection-title"
+							id="recipe-images"
+						>
+							Imágenes de Recetas
+						</h3>
+						<scope with="recipesAttributions">
+							<include src="partials/links-table.html"></include>
+						</scope>
 					</div>
 				</section>
 			</div>

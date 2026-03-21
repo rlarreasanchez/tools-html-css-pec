@@ -47,5 +47,35 @@
 			"title": "Cómo cocinar salmón a la plancha sin que se pegue",
 			"caption": "Mira cómo se prepara el Salmón a la plancha con eneldo paso a paso."
 		}
+	],
+	"attributions": [
+		{
+			"image": "Salmón a la plancha",
+			"author_name": "BuyMeACoffee",
+			"author_url": "https://pixabay.com/es/users/buymeacoffee-1480774/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=10158737",
+			"source_name": "Pixabay",
+			"source_url": "https://pixabay.com/es/photos/l%c3%a1mina-salm%c3%b3n-br%c3%b3coli-esp%c3%a1rragos-10158737/"
+		},
+		{
+			"image": "Salmón a la plancha - Contenido 1",
+			"author_name": "Karyna Panchenko",
+			"author_url": "https://unsplash.com/es/@karyna_panchenko?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText",
+			"source_name": "Unsplash",
+			"source_url": "https://unsplash.com/es/fotos/un-primer-plano-de-un-trozo-de-pescado-en-una-mesa-1OnuYCARYmc?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+		},
+		{
+			"image": "Salmón a la plancha - Contenido 2",
+			"author_name": "Collab Media",
+			"author_url": "https://unsplash.com/es/@collab_media?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText",
+			"source_name": "Unsplash",
+			"source_url": "https://unsplash.com/es/fotos/un-pescado-se-esta-cocinando-en-una-sarten-1aj1sirGQAA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+		},
+		{
+			"image": "Salmón a la plancha - Contenido 3",
+			"author_name": "Sebastian Coman Photography",
+			"author_url": "https://unsplash.com/es/@sebastiancoman?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText",
+			"source_name": "Unsplash",
+			"source_url": "https://unsplash.com/es/fotos/pan-de-molde-en-plato-de-ceramica-blanca-Co-T6odt0es?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+		}
 	]
 }

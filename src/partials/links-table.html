@@ -1,0 +1,52 @@
+<table
+	class="links__table"
+	aria-labelledby="{{ labelledby }}"
+>
+	<caption class="links__table-caption">
+		{{{ caption }}}
+	</caption>
+	<thead>
+		<tr>
+			<th scope="col">Imagen</th>
+			<th scope="col">Autor</th>
+			<th scope="col">Fuente</th>
+		</tr>
+	</thead>
+	<tbody>
+		<each loop="row in attributions">
+			<scope with="row">
+				<tr>
+					<td data-label="Imagen">{{{ image }}}</td>
+					<td data-label="Autor">
+						<a
+							href="{{ author_url }}"
+							target="_blank"
+							rel="noopener noreferrer"
+							class="links__external-link"
+						>
+							{{{ author_name }}}
+							<i
+								class="fas fa-external-link-alt"
+								aria-hidden="true"
+							></i>
+						</a>
+					</td>
+					<td data-label="Fuente">
+						<a
+							href="{{ source_url }}"
+							target="_blank"
+							rel="noopener noreferrer"
+							class="links__external-link"
+						>
+							{{{ source_name }}}
+							<i
+								class="fas fa-external-link-alt"
+								aria-hidden="true"
+							></i>
+						</a>
+					</td>
+				</tr>
+			</scope>
+		</each>
+	</tbody>
+</table>

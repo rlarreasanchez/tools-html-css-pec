@@ -46,6 +46,13 @@ const recipesWithPagination = recipes.map((recipe, index) => ({
 	],
 }));
 
+// Extraer todas las atribuciones de las recetas para la página de enlaces
+const recipesAttributions = {
+	labelledby: "recipe-images",
+	caption: "Atribución de las imágenes utilizadas en las recetas",
+	attributions: recipes.map((recipe) => recipe.attributions || []).flat(),
+};
+
 module.exports = {
 	plugins: {
 		"posthtml-extend": {
@@ -63,6 +70,7 @@ module.exports = {
 					pages,
 					recipesPerPage: RECIPES_PER_PAGE,
 				},
+				recipesAttributions: recipesAttributions,
 			},
 		},
 	},
