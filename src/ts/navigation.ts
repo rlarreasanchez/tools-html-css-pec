@@ -1,4 +1,13 @@
+/**
+ * Módulo de navegación
+ *
+ * Este módulo se encarga de manejar la navegación del sitio, incluyendo:
+ * - El menú para dispositivos móviles
+ * - La asignación de la clase activa al enlace correspondiente según la URL actual
+ * - Mejoras de accesibilidad para el menú de navegación
+ */
 export function initNavigation(): void {
+	const header = document.querySelector<HTMLElement>(".site-header");
 	const menuToggle = document.querySelector<HTMLButtonElement>(".site-header__menu-toggle");
 	const nav = document.querySelector<HTMLElement>("#main-navigation");
 
@@ -7,6 +16,7 @@ export function initNavigation(): void {
 	// Se establece el enlace activo al cargar la página
 	setActiveNavLink();
 
+	// Se añade el evento de pulsación al botón de menú para dispositivos móviles
 	menuToggle.addEventListener("click", () => {
 		const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
 		const newState = !isExpanded;
@@ -14,7 +24,7 @@ export function initNavigation(): void {
 		menuToggle.setAttribute("aria-expanded", String(newState));
 		menuToggle.setAttribute(
 			"aria-label",
-			newState ? "Cerrar menu de navegación" : "Abrir menu de navegación",
+			newState ? "Cerrar menú de navegación" : "Abrir menú de navegación",
 		);
 		nav.classList.toggle("is-open", newState);
 
@@ -53,5 +63,19 @@ export function initNavigation(): void {
 	// Función para normalizar las rutas eliminando barras finales e index.html
 	function normalizePath(path: string): string {
 		return path.replace(/\/$/, "").replace(/\/index\.html$/, "") || "/";
+	}
+
+	// Se añade sombreado al hacer scroll para mejorar la legibilidad del menú de navegación
+	if (header) {
+		const onScroll = (): void => {
+			if (window.scrollY > 50) {
+				header.classList.add("site-header--scrolled");
+			} else {
+				header.classList.remove("site-header--scrolled");
+			}
+		};
+
+		window.addEventListener("scroll", onScroll, { passive: true });
+		onScroll();
 	}
 }
