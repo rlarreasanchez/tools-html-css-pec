@@ -12,6 +12,10 @@
 
   &__section {
     margin-bottom: $space-3xl;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   &__section-title {
@@ -51,6 +55,15 @@
       font-weight: $font-weight-bold;
       color: $color-primary-dark;
     }
+  }
+
+  &__content-subtitle {
+    font-family: $font-heading;
+    font-size: $font-size-lg;
+    font-weight: $font-weight-bold;
+    color: $color-foreground;
+    margin-top: $space-xl;
+    margin-bottom: $space-md;
   }
 
   &__subsection {
