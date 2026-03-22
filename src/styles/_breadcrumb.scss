@@ -10,6 +10,10 @@
     gap: $space-xs;
     font-size: $font-size-sm;
     color: $color-muted;
+
+    @media (min-width: $breakpoint-md) {
+      font-size: $font-size-base;
+    }
   }
 
   &__item {

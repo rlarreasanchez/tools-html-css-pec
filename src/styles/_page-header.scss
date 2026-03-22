@@ -16,14 +16,14 @@
 
   &__title {
     font-family: $font-heading;
-    font-size: $font-size-3xl;
+    font-size: $font-size-2xl;
     font-weight: $font-weight-black;
     line-height: $line-height-tight;
     color: $color-foreground;
     margin-bottom: $space-md;
 
     @media (min-width: $breakpoint-md) {
-      font-size: $font-size-4xl;
+      font-size: $font-size-3xl;
     }
   }
 
@@ -31,6 +31,5 @@
     font-size: $font-size-md;
     line-height: $line-height-relaxed;
     color: $color-muted;
-    max-width: 640px;
   }
 }
