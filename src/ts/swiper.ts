@@ -1,3 +1,12 @@
+/**
+ *
+ * Módulo de Swiper
+ *
+ * Este módulo se encarga de inicializar el slider de recetas utilizando la librería Swiper, incluyendo:
+ * - Configuración de Swiper para mostrar las recetas de forma atractiva
+ * - Responsividad para adaptarse a diferentes tamaños de pantalla
+ */
+
 import Swiper from "swiper";
 import { Autoplay, Pagination } from "swiper/modules";
 

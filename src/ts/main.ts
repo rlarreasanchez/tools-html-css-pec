@@ -1,3 +1,10 @@
+/**
+ *
+ * Módulo Principal
+ *
+ * Este módulo se encarga de inicializar la aplicación
+ */
+
 import { initNavigation } from "./navigation";
 import { initNewsletter } from "./newsletter";
 import { initPagination } from "./pagination";
@@ -10,6 +17,12 @@ function initApp(): void {
 	initPagination();
 	initNewsletter();
 	initSwiper();
+
+	// Actualizar el año en el pie de página
+	const yearEl = document.getElementById("current-year");
+	if (yearEl) {
+		yearEl.textContent = new Date().getFullYear().toString();
+	}
 }
 
 // Inicializar la aplicación una vez que el DOM esté completamente cargado

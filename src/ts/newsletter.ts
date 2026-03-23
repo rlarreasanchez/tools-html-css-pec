@@ -1,3 +1,12 @@
+/**
+ *
+ * Módulo de Newsletter
+ *
+ * Este módulo se encarga de gestionar el formulario de suscripción al newsletter, incluyendo:
+ * - Validación de campos (nombre, correo electrónico, consentimiento)
+ * - Manejo de errores con mensajes
+ */
+
 interface FormElements {
 	form: HTMLFormElement;
 	nameInput: HTMLInputElement;

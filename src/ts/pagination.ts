@@ -1,3 +1,13 @@
+/**
+ *
+ * Módulo de Paginación
+ *
+ * Este módulo se encarga de gestionar la paginación de las recetas, incluyendo:
+ * - Mostrar solo un número limitado de recetas por página
+ * - Navegación entre páginas mediante botones de paginación
+ * - Filtrado por categorías, que afecta a la paginación
+ */
+
 import { RECIPES_PER_PAGE } from "../config/pagination.config.json";
 
 // Página actual (por defecto, la primera página)
