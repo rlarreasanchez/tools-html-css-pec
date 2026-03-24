@@ -175,3 +175,25 @@
     }
   }
 }
+
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: $space-md;
+  z-index: 100;
+  padding: $space-sm $space-lg;
+  background-color: $color-foreground;
+  color: $color-white;
+  font-family: $font-body;
+  font-size: $font-size-base;
+  font-weight: $font-weight-bold;
+  text-decoration: underline;
+  border-radius: 0 0 $radius-md $radius-md;
+  transition: top 0.2s ease;
+
+  &:focus {
+    top: 0;
+    outline: 3px solid $color-primary;
+    outline-offset: 2px;
+  }
+}
