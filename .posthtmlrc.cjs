@@ -72,6 +72,8 @@ module.exports = {
 				},
 				recipesAttributions: recipesAttributions,
 			},
+			removeScriptLocals: true,
+			strictMode: false,
 		},
 	},
 };
