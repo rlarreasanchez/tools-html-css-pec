@@ -4,6 +4,7 @@
 		class="recipe-card__link"
 		aria-label="{{ recipe.link_aria_label }}"
 	>
+		<!-- Imagen de la receta -->
 		<div class="recipe-card__image-wrapper">
 			<img
 				src="/src/images/{{ recipe.image }}"
@@ -13,8 +14,15 @@
 				height="400"
 				loading="lazy"
 			/>
-			<span class="recipe-card__category">{{ recipe.category }}</span>
+
+			<!-- Categoría de la receta -->
+			<span class="recipe-card__category">
+				<span class="sr-only">Categoría: </span>
+				{{ recipe.category }}
+			</span>
 		</div>
+
+		<!-- Contenido de la receta -->
 		<div class="recipe-card__content">
 			<h3 class="recipe-card__title">{{{ recipe.title_html }}}</h3>
 			<p class="recipe-card__description">{{{ recipe.description_html }}}</p>
@@ -24,6 +32,7 @@
 						class="far fa-clock icon--primary"
 						aria-hidden="true"
 					></i>
+					<span class="sr-only">Duración: </span>
 					{{ recipe.duration }}
 				</div>
 				<div class="recipe-card__meta-item">
@@ -31,6 +40,7 @@
 						class="far fa-star icon--primary"
 						aria-hidden="true"
 					></i>
+					<span class="sr-only">Dificultad: </span>
 					{{ recipe.difficulty }}
 				</div>
 			</div>

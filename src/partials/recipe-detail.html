@@ -2,6 +2,7 @@
 	class="detail"
 	aria-labelledby="detail-title"
 >
+	<!-- Imagen principal -->
 	<div
 		class="detail__hero"
 		data-aos="fade-down"
@@ -17,6 +18,7 @@
 	</div>
 
 	<div class="detail__container">
+		<!-- Header / Breadcrumbs -->
 		<include
 			src="partials/breadcrumb.html"
 			locals='{ "breadcrumb": breadcrumb }'
@@ -68,10 +70,14 @@
 		</header>
 
 		<div class="detail__body">
+			<!-- Contenido de la receta -->
 			<each loop="content in contents">
+				<!-- Párrafo -->
 				<if condition="content.type === 'paragraph'">
 					<p>{{{ content.text }}}</p>
 				</if>
+
+				<!-- Imagen -->
 				<if condition="content.type === 'image'">
 					<figure
 						class="detail__figure"
@@ -89,6 +95,8 @@
 						<figcaption class="detail__caption">{{{ content.caption }}}</figcaption>
 					</figure>
 				</if>
+
+				<!-- Video -->
 				<if condition="content.type === 'video'">
 					<figure
 						class="detail__video"
@@ -120,6 +128,8 @@
 					</figure>
 				</if>
 			</each>
+
+			<!-- Paginación -->
 			<nav
 				class="detail__pagination"
 				aria-label="Navegacion entre recetas"

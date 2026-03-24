@@ -29,8 +29,10 @@
 			action="#"
 			method="post"
 			novalidate
+			aria-labelledby="newsletter-title"
 		>
 			<div class="newsletter__form-group">
+				<!-- Campo Nombre -->
 				<div class="newsletter__field">
 					<label
 						for="newsletter-name"
@@ -55,6 +57,8 @@
 						role="alert"
 					></span>
 				</div>
+
+				<!-- Campo Correo electrónico -->
 				<div class="newsletter__field">
 					<label
 						for="newsletter-email"
@@ -81,6 +85,7 @@
 				</div>
 			</div>
 
+			<!-- Checkbox de consentimiento -->
 			<div class="newsletter__consent">
 				<div class="newsletter__consent-field">
 					<input
@@ -111,6 +116,7 @@
 				></span>
 			</div>
 
+			<!-- Botón de envío -->
 			<button
 				type="submit"
 				class="btn btn--primary btn--full newsletter__submit"
@@ -122,6 +128,8 @@
 				Suscribirme a la newsletter
 			</button>
 		</form>
+
+		<!-- Mensaje de éxito -->
 		<div
 			class="newsletter__success"
 			id="newsletter-success"

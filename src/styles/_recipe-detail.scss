@@ -23,6 +23,7 @@
     padding: $space-xl $container-padding $space-4xl;
   }
 
+  // Header
   &__header {
     margin-bottom: $space-2xl;
     padding-bottom: $space-xl;
@@ -67,6 +68,7 @@
     }
   }
 
+  // Contenido
   &__body {
     p {
       font-size: $font-size-md;
@@ -80,6 +82,7 @@
     }
   }
 
+  // Multimedia
   &__figure {
     margin: $space-2xl 0;
   }
@@ -129,6 +132,7 @@
     }
   }
 
+  // Paginación
   &__pagination {
     display: flex;
     flex-direction: column;
