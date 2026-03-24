@@ -4,7 +4,10 @@
 	aria-labelledby="recipes-heading"
 >
 	<div class="recipes__container">
-		<div class="recipes__header">
+		<div
+			class="recipes__header"
+			data-aos="fade-up"
+		>
 			<span class="section-label">Destacados</span>
 			<h2
 				id="recipes-heading"
@@ -18,7 +21,11 @@
 			</p>
 		</div>
 
-		<div class="recipes-swiper swiper">
+		<div
+			class="recipes-swiper swiper"
+			data-aos="fade-up"
+			data-aos-delay="200"
+		>
 			<ul class="recipes__grid swiper-wrapper">
 				<each loop="recipe in recipes.slice(0, 6)">
 					<li class="swiper-slide">

@@ -2,7 +2,10 @@
 	class="detail"
 	aria-labelledby="detail-title"
 >
-	<div class="detail__hero">
+	<div
+		class="detail__hero"
+		data-aos="fade-down"
+	>
 		<img
 			src="/src/images/{{ image }}"
 			alt="{{ alt_image }}"
@@ -18,7 +21,11 @@
 			src="partials/breadcrumb.html"
 			locals='{ "breadcrumb": breadcrumb }'
 		></include>
-		<header class="detail__header">
+		<header
+			class="detail__header"
+			data-aos="fade-up"
+			data-aos-delay="100"
+		>
 			<span class="section-label">{{ category }}</span>
 			<h1
 				id="detail-title"
@@ -121,6 +128,8 @@
 					<a
 						href="{{ prevLink }}"
 						class="detail__pagination-link detail__pagination-link--prev"
+						data-aos="fade-right"
+						data-aos-delay="100"
 					>
 						<i
 							class="fas fa-chevron-left icon-chevron-left"
@@ -134,6 +143,8 @@
 					<a
 						href="/categoria"
 						class="detail__pagination-link detail__pagination-link--prev"
+						data-aos="fade-right"
+						data-aos-delay="100"
 					>
 						<i
 							class="fas fa-chevron-left icon-chevron-left"
@@ -147,6 +158,8 @@
 					<a
 						href="{{ nextLink }}"
 						class="detail__pagination-link detail__pagination-link--next"
+						data-aos="fade-left"
+						data-aos-delay="100"
 					>
 						<span class="detail__pagination-label">Siguiente receta</span>
 						<span class="detail__pagination-title">{{ nextLinkTitle }}</span>
@@ -160,6 +173,8 @@
 					<a
 						href="/categoria"
 						class="detail__pagination-link detail__pagination-link--next"
+						data-aos="fade-left"
+						data-aos-delay="100"
 					>
 						<span class="detail__pagination-label">Volver a</span>
 						<span class="detail__pagination-title">Todas las recetas</span>

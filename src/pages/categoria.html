@@ -25,7 +25,10 @@
 			class="page-header page-header--small"
 			aria-labelledby="page-title"
 		>
-			<div class="page-header__container">
+			<div
+				class="page-header__container"
+				data-aos="fade-down"
+			>
 				<include
 					src="partials/breadcrumb.html"
 					locals="breadcrumb"
@@ -54,6 +57,8 @@
 				<h2
 					id="category-list-title"
 					class="category-list__title"
+					data-aos="fade-left"
+					data-aos-delay="100"
 				>
 					Listado de Recetas
 				</h2>
@@ -63,6 +68,8 @@
 					class="category-filters"
 					role="group"
 					aria-label="Filtros de categorías"
+					data-aos="fade-right"
+					data-aos-delay="100"
 				>
 					<h3 class="category-filters__title">Filtrar por categoría:</h3>
 					<div class="category-filters__buttons">
@@ -94,6 +101,8 @@
 				<ul
 					class="category-list__grid"
 					id="category-grid"
+					data-aos="fade-up"
+					data-aos-delay="200"
 				>
 					<each loop="recipe in recipes">
 						<li
