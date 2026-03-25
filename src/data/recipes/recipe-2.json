@@ -5,7 +5,7 @@
 	"description_html": "La receta tradicional italiana con <span lang=\"it\">mascarpone</span> cremoso, café <span lang=\"it\">espresso</span> y un toque de cacao amargo.",
 	"link_aria_label": "Leer receta completa de Tiramisú clásico",
 	"image": "recipe-2.jpg",
-	"alt_image": "Tiramisú clásico",
+	"alt_image": "Porción de tiramisú clásico con capas de bizcocho y crema de mascarpone",
 	"category": "Postres",
 	"duration": "60 minutos",
 	"difficulty": "Media",
@@ -18,7 +18,7 @@
 		{
 			"type": "image",
 			"src": "recipe-2-content-1.jpg",
-			"alt": "Ingredientes del tiramisu dispuestos sobre superficie de mármol: mascarpone en un cuenco, huevos frescos, taza de café espresso, bizcochos savoiardi y cacao en polvo",
+			"alt": "Ingredientes del tiramisú: mascarpone, huevos, café espresso, bizcochos savoiardi y cacao en polvo",
 			"caption": "Los ingredientes esenciales: <span lang=\"it\">mascarpone</span>, huevos, café <span lang=\"it\">espresso</span>, <span lang=\"it\">savoiardi</span> y cacao."
 		},
 		{
@@ -28,7 +28,7 @@
 		{
 			"type": "image",
 			"src": "recipe-2-content-2.jpg",
-			"alt": "Sección transversal de un tiramisú mostrando las capas diferenciadas: bizcochos empapados en café, crema de mascarpone y cacao en polvo por encima, en fuente de cristal",
+			"alt": "Sección transversal del tiramisú mostrando capas de bizcocho, crema de mascarpone y cacao",
 			"caption": "Las capas del <span lang=\"it\">tiramisú</span>: bizcochos, crema y cacao, un equilibrio perfecto."
 		},
 		{
@@ -38,7 +38,7 @@
 		{
 			"type": "image",
 			"src": "recipe-2-content-3.jpg",
-			"alt": "Porcion individual de tiramisú emplatada con elegancia en plato de postre blanco con espolvoreado de cacao, junto a una taza de café",
+			"alt": "Porción individual de tiramisú en plato blanco con espolvoreado de cacao y taza de café",
 			"caption": "El <span lang=\"it\">tiramisú</span> emplatado: un postre que entra por los ojos."
 		},
 		{

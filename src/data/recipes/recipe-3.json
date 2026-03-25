@@ -5,7 +5,7 @@
 	"description_html": "Filete de salmón noruego cocinado a la perfección con una salsa ligera de limón y hierbas frescas del huerto.",
 	"link_aria_label": "Leer receta completa de Salmón a la plancha con eneldo",
 	"image": "recipe-3.jpg",
-	"alt_image": "Salmón a la plancha con eneldo",
+	"alt_image": "Plato de salmón a la plancha con eneldo fresco y acompañamiento de verduras",
 	"category": "Pescado",
 	"duration": "30 minutos",
 	"difficulty": "Fácil",
@@ -18,7 +18,7 @@
 		{
 			"type": "image",
 			"src": "recipe-3-content-1.jpg",
-			"alt": "Filete de salmón crudo siendo sazonado con sal marina, pimienta negra y eneldo fresco sobre tabla de cortar de madera, con medios limones al lado",
+			"alt": "Filete de salmón crudo sazonado con sal, pimienta y eneldo fresco sobre tabla de madera",
 			"caption": "La preparación: sazonar el salmón con sal marina, pimienta y eneldo fresco."
 		},
 		{
@@ -28,7 +28,7 @@
 		{
 			"type": "image",
 			"src": "recipe-3-content-2.jpg",
-			"alt": "Filete de salmón cocinándose en sartén de hierro fundido con la piel hacia abajo, marcas de la plancha visibles, hierbas aromáticas chisporroteando al lado y vapor ascendente",
+			"alt": "Filete de salmón cocinándose en sartén con la piel hacia abajo y hierbas aromáticas",
 			"caption": "La plancha bien caliente sella el salmón, creando una costra dorada y crujiente."
 		},
 		{
@@ -38,7 +38,7 @@
 		{
 			"type": "image",
 			"src": "recipe-3-content-3.jpg",
-			"alt": "Filete de salmón a la plancha emplatado con elegancia sobre plato blanco de cerámica, acompañado de espárragos asados, tomates cherry y salsa de limón con eneldo, decorado con microbrotes",
+			"alt": "Filete de salmón a la plancha con espárragos, tomates cherry y salsa de limón con eneldo",
 			"caption": "El emplatado final: salmón, verduras asadas y salsa de limón con eneldo."
 		},
 		{

@@ -5,7 +5,7 @@
 	"description_html": "Pasta fresca hecha a mano con una delicada salsa de trufa negra de temporada y parmesano <span lang=\"it\">Reggiano</span>.",
 	"link_aria_label": "Leer receta completa de Tagliatelle al tartufo",
 	"image": "recipe-1.jpg",
-	"alt_image": "Plato de pasta tagliatelle con salsa de trufa, albahaca fresca y queso parmesano rallado sobre plato de cerámica",
+	"alt_image": "Plato de tagliatelle con salsa de trufa, albahaca fresca y queso parmesano rallado",
 	"category": "Pasta",
 	"duration": "45 minutos",
 	"difficulty": "Media",
@@ -28,7 +28,7 @@
 		{
 			"type": "image",
 			"src": "recipe-1-content-2.jpg",
-			"alt": "Trufa negra entera y laminas de trufa cortadas sobre tabla de madera rústica junto a un laminador de trufa",
+			"alt": "Trufa negra entera y laminas de trufa cortadas sobre tabla de madera rústica",
 			"caption": "La trufa negra de temporada: el ingrediente estrella de este plato."
 		},
 		{
@@ -38,7 +38,7 @@
 		{
 			"type": "image",
 			"src": "recipe-1-content-3.jpg",
-			"alt": "Servicio elegante de tagliatelle con virutas de trufa añadidas desde arriba, vapor ascendente, ambiente de restaurante con velas",
+			"alt": "Servicio elegante de tagliatelle con virutas de trufa añadidas desde arriba, con vapor ascendente",
 			"caption": "El momento del emplatado: las láminas de trufa se añaden justo antes de servir."
 		},
 		{
