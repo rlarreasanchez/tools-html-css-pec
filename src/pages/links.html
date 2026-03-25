@@ -103,6 +103,39 @@
 						</p>
 					</div>
 
+					<!-- Imagen Favicon -->
+					<div class="links__subsection">
+						<h3
+							class="links__subsection-title"
+							id="favicon-title"
+						>
+							Imagen del Favicon
+						</h3>
+						<script
+							locals
+							type="module"
+						>
+							module.exports = {
+								faviconAttributions: {
+									labelledby: "favicon-title",
+									caption: "Atribución de la imagen utilizada como favicon del sitio web",
+									attributions: [
+										{
+											image: "Favicon",
+											author_name: "Flaticon Company",
+											author_url: "https://www.flaticon.es",
+											source_name: "Flaticon",
+											source_url: "https://www.flaticon.es/iconos-gratis/restaurante",
+										},
+									],
+								},
+							};
+						</script>
+						<scope with="faviconAttributions">
+							<include src="partials/links-table.html"></include>
+						</scope>
+					</div>
+
 					<!-- Imagen Hero (Portada) -->
 					<div class="links__subsection">
 						<h3
