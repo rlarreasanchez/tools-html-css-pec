@@ -97,9 +97,220 @@ Puedes desplegar el contenido de la carpeta `dist/` en cualquier servidor web es
 Puedes ver el resultado en la página web:
 [https://tools-html-css-pec.netlify.app/](https://tools-html-css-pec.netlify.app/)
 
+## Sistema de Generación Automática de Páginas
+
+### Cómo Funciona
+
+El proyecto utiliza un **script de generación automática** (`src/scripts/generate-recipes-pages.cjs`) que:
+
+1. **Escanea** la carpeta `src/data/recipes/` en busca de archivos JSON (excluyendo `template.json` que es la plantilla para nuevas recetas)
+2. **Lee** cada archivo de receta y extrae sus datos
+3. **Elimina** cualquier página de recetas existentes en `src/pages/` con el prefijo definido en `recipes.config.json` (para evitar páginas huérfanas)
+4. **Genera** una página HTML para cada receta en `src/pages/` con el formato `{RECIPES_SLUG}1.html`, `{RECIPES_SLUG}2.html`, etc.
+5. **Crea** el contenido HTML utilizando el layout `site-page-layout.html` y el partial `recipe-detail.html`
+
+> **Nota**: No es necesario ejecutar este script manualmente, ya que se ejecuta automáticamente al iniciar el servidor de desarrollo o al generar el build de producción.
+
+> **Nota**: Si añades nuevas páginas en `src/pages/`, asegúrate de no nombrarlas con el prefijo definido en `recipes.config.json` para evitar conflictos con el sistema de generación automática
+
+> **Nota**: Si modificas el prefijo y ya se han generado páginas con el prefijo anterior, deberás eliminar manualmente las páginas antiguas para evitar páginas huérfanas. El sistema de generación solo elimina páginas que coincidan con el prefijo actual definido en `recipes.config.json`.
+
+### Flujo de Generación
+
+```
+src/data/recipes/recipe-1.json  →  src/pages/{RECIPES_SLUG}1.html
+src/data/recipes/recipe-2.json  →  src/pages/{RECIPES_SLUG}2.html
+src/data/recipes/recipe-3.json  →  src/pages/{RECIPES_SLUG}3.html
+...
+```
+
+### Configuración
+
+El sistema utiliza dos archivos de configuración:
+
+#### `src/config/recipes.config.json`
+
+```json
+{
+	"RECIPES_SLUG": "det" // Para cumplir con las especificaciones del ejercicio propuesto para la PEC
+}
+```
+
+Define el prefijo del slug para las URLs de las recetas (ej: `/det1`, `/det2`).
+
+#### `src/config/pagination.config.json`
+
+```json
+{
+	"RECIPES_PER_PAGE": 6
+}
+```
+
+Define cuántas recetas se muestran por página en el listado principal (url: `/categoria`).
+
+### Páginas Generadas
+
+Cada página generada:
+
+- Extiende el layout principal del sitio
+- Incluye metadatos SEO (título y descripción de la receta)
+- Renderiza el contenido de la receta usando el partial `recipe-detail.html`
+- Se vincula automáticamente desde las tarjetas de recetas en los listados de recetas
+
+## Cómo Crear Nuevas Recetas
+
+### Paso 1: Crear el Archivo JSON
+
+1. **Navega** a la carpeta `src/data/recipes/`
+2. **Duplica** el archivo `template.json` o cualquier receta existente
+3. **Renombra** el archivo siguiendo el patrón: `recipe-N.json` (donde N es el siguiente número disponible)
+
+### Paso 2: Completar los Datos de la Receta
+
+Abre el archivo JSON y completa todos los campos:
+
+```json
+{
+	"title": "Título de la receta",
+	"title_html": "Título con etiquetas <span>HTML</span>",
+	"description": "Descripción breve para SEO",
+	"description_html": "Descripción con etiquetas <span>HTML</span> para el listado",
+	"link_aria_label": "Leer receta completa de [Nombre de la receta]",
+	"image": "nombre-imagen.jpg",
+	"alt_image": "Descripción detallada de la imagen",
+	"category": "Pasta | Postres | Arroces | etc.",
+	"duration": "45 minutos",
+	"difficulty": "Fácil | Media | Difícil",
+	"rations": "4",
+	"contents": [
+		{
+			"type": "paragraph",
+			"text": "Texto del párrafo con HTML permitido"
+		},
+		{
+			"type": "image",
+			"src": "nombre-imagen-contenido.jpg",
+			"alt": "Descripción de la imagen",
+			"caption": "Pie de foto"
+		},
+		{
+			"type": "video",
+			"src": "https://www.youtube.com/embed/VIDEO_ID",
+			"title": "Título del video",
+			"caption": "Descripción del video"
+		}
+	],
+	"attributions": [
+		{
+			"image": "Nombre identificativo de la imagen",
+			"author_name": "Nombre del autor",
+			"author_url": "https://enlace-al-perfil-del-autor.com",
+			"source_name": "Nombre de la fuente",
+			"source_url": "https://enlace-a-la-fuente.com"
+		}
+	]
+}
+```
+
+> **Nota**: En la clave `contents`, se incluirán los elementos que serán visualizados en la página de detalle de la receta `/{RECIPES_SLUG}{N}`, puedes añadir múltiples elementos de tipo párrafo, imagen o video para enriquecer la receta. Asegúrate de seguir el formato correcto para cada tipo de contenido. Las secciones aparecerán en el orden definido en el array.
+
+> **Nota**: En la clave `attributions`, puedes incluir créditos para las imágenes utilizadas en la receta. Estas atribuciones se mostrarán en la página de enlaces `/links.html`, en la tabla de atribuciones de imágenes.
+
+### Paso 3: Añadir las Imágenes
+
+1. **Guarda las imágenes** en la carpeta `src/images/`
+2. **Nomenclatura recomendada**:
+   - Imagen principal: `recipe-N.jpg`
+   - Imágenes de contenido: `recipe-N-content-1.jpg`, `recipe-N-content-2.jpg`, etc.
+
+### Paso 4: Regenerar las Páginas
+
+Para que la nueva receta aparezca en el sitio:
+
+```bash
+npm run generate:recipes
+```
+
+O simplemente reinicia el servidor de desarrollo:
+
+```bash
+npm start
+```
+
+### Paso 5: Verificar
+
+1. Abre el navegador en `http://localhost:1234`
+2. Verifica que la nueva receta aparece en el listado principal
+3. Haz click en la tarjeta para ver la página de detalle
+4. Comprueba que todos los datos se muestran correctamente en su orden y formato
+5. Verifica que las atribuciones de las imágenes aparecen en la página de enlaces
+
+### Campos del JSON Explicados
+
+| Campo              | Descripción                                               |
+| ------------------ | --------------------------------------------------------- |
+| `title`            | Título de la receta (texto plano)                         |
+| `title_html`       | Título con formato HTML (permite etiquetas como `<span>`) |
+| `description`      | Resumen breve para SEO y listado                          |
+| `description_html` | Resumen con formato HTML                                  |
+| `link_aria_label`  | Texto descriptivo para accesibilidad                      |
+| `image`            | Nombre del archivo de imagen principal                    |
+| `alt_image`        | Texto alternativo descriptivo de la imagen                |
+| `category`         | Categoría de la receta                                    |
+| `duration`         | Tiempo de preparación                                     |
+| `difficulty`       | Nivel de dificultad                                       |
+| `rations`          | Número de raciones                                        |
+| `contents`         | Array con el contenido detallado                          |
+| `attributions`     | Array con créditos de las imágenes utilizadas             |
+
+### Tipos de Contenido Soportados
+
+El array `contents` puede incluir tres tipos de elementos:
+
+#### 1. Párrafo
+
+```json
+{
+	"type": "paragraph",
+	"text": "Texto del párrafo con <span lang=\"it\">HTML permitido</span>"
+}
+```
+
+#### 2. Imagen
+
+```json
+{
+	"type": "image",
+	"src": "nombre-imagen.jpg",
+	"alt": "Descripción accesible",
+	"caption": "Pie de foto opcional"
+}
+```
+
+#### 3. Video
+
+```json
+{
+	"type": "video",
+	"src": "https://www.youtube.com/embed/VIDEO_ID",
+	"title": "Título para accesibilidad",
+	"caption": "Descripción del video"
+}
+```
+
+### Atribuciones de Imágenes
+
+En la sección `attributions`, puedes incluir créditos para las imágenes utilizadas en la receta. Cada objeto de atribución debe contener:
+
+- `image`: Nombre identificativo de la imagen de la receta
+- `author_name`: Nombre del autor de la imagen
+- `author_url`: URL al perfil del autor
+- `source_name`: Nombre de la fuente original de la imagen
+- `source_url`: URL a la fuente original de la imagen
+
 ## Autor
 
-**Rafael Larrea Sánchez**
+[Rafael Larrea Sánchez](https://www.linkedin.com/in/rafael-larrea-s%C3%A1nchez-06824592/)
 
 ## Licencia
 
