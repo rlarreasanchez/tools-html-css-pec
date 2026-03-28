@@ -44,19 +44,19 @@
 					</li>
 					<li>
 						<a
-							href="#recetas"
+							href="/#recetas"
 							class="site-footer__link"
 						>
 							<i
 								class="fas fa-utensils icon-space-right"
 								aria-hidden="true"
 							></i>
-							Recetas
+							Recetas del momento
 						</a>
 					</li>
 					<li>
 						<a
-							href="#sobre-nosotros"
+							href="/#sobre-nosotros"
 							class="site-footer__link"
 						>
 							<i
@@ -70,56 +70,54 @@
 			</div>
 
 			<div class="site-footer__nav-group">
-				<h3 class="site-footer__nav-title">Categorías</h3>
+				<h3 class="site-footer__nav-title">Últimas Recetas</h3>
 				<ul class="site-footer__nav-list">
-					<li>
-						<a
-							href="#"
-							class="site-footer__link"
-						>
-							<i
-								class="fas fa-wheat-awn icon-space-right"
-								aria-hidden="true"
-							></i>
-							Pasta y arroces
-						</a>
-					</li>
-					<li>
-						<a
-							href="#"
-							class="site-footer__link"
-						>
-							<i
-								class="fas fa-fish icon-space-right"
-								aria-hidden="true"
-							></i>
-							Pescados y mariscos
-						</a>
-					</li>
-					<li>
-						<a
-							href="#"
-							class="site-footer__link"
-						>
-							<i
-								class="fas fa-birthday-cake icon-space-right"
-								aria-hidden="true"
-							></i>
-							Postres y dulces
-						</a>
-					</li>
-					<li>
-						<a
-							href="#"
-							class="site-footer__link"
-						>
-							<i
-								class="fas fa-leaf icon-space-right"
-								aria-hidden="true"
-							></i>
-							Verduras y ensaladas
-						</a>
-					</li>
+					<each loop="recipe in recipes.slice(0, 4)">
+						<li class="swiper-slide">
+							<a
+								href="{{ recipe.link }}"
+								class="site-footer__link"
+							>
+								<switch expression="recipe.category">
+									<case n="'Pasta'">
+										<i
+											class="fas fa-wheat-awn icon-space-right"
+											aria-hidden="true"
+										></i>
+										<break>
+									</case>
+									<case n="'Pescado'">
+										<i
+											class="fas fa-fish icon-space-right"
+											aria-hidden="true"
+										></i>
+										<break>
+									</case>
+									<case n="'Postres'">
+										<i
+											class="fas fa-birthday-cake icon-space-right"
+											aria-hidden="true"
+										></i>
+										<break>
+									</case>
+									<case n="'Arroces'">
+										<i
+											class="fas fa-bowl-rice icon-space-right"
+											aria-hidden="true"
+										></i>
+										<break>
+									</case>
+									<default>
+										<i
+											class="fas fa-utensils icon-space-right"
+											aria-hidden="true"
+										></i>
+									</default>
+								</switch>
+								{{ recipe.title }}
+							</a>
+						</li>
+					</each>
 				</ul>
 			</div>
 
