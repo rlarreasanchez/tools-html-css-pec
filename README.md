@@ -308,6 +308,98 @@ En la sección `attributions`, puedes incluir créditos para las imágenes utili
 - `source_name`: Nombre de la fuente original de la imagen
 - `source_url`: URL a la fuente original de la imagen
 
+## Estructura del Proyecto
+
+```
+tools-html-css-pec/
+├── dist/                      # Build de producción (generada)
+├── .parcel-cache/             # Cache de Parcel (generada)
+├── node_modules/              # Dependencias de módulos de Node (generada)
+├── src/
+│   ├── config/                 # Archivos de configuración
+│   │   ├── pagination.config.json
+│   │   └── recipes.config.json
+│   ├── data/
+│   │   └── recipes/            # Datos de recetas en formato JSON
+│   │       ├── recipe-1.json
+│   │       ├── recipe-2.json
+│   │       ├── ...
+│   │       └── template.json   # Plantilla para nuevas recetas
+│   ├── images/                 # Imágenes del sitio
+│   ├── layouts/                # Layouts principales
+│   │   └── site-page-layout.html
+│   ├── pages/                  # Páginas HTML
+│   │   ├── index.html
+│   │   ├── categoria.html
+│   │   ├── links.html
+│   │   ├── det1.html           # ← Generada automáticamente
+│   │   ├── det2.html           # ← Generada automáticamente
+│   │   └── ...
+│   ├── partials/               # Componentes y secciones reutilizables
+│   │   ├── header.html
+│   │   ├── footer.html
+│   │   └── ...
+│   ├── scripts/                # Scripts de generación
+│   │   └── generate-recipes-pages.cjs
+│   ├── styles/                 # Estilos Sass
+│   │   ├── styles.scss         # Archivo principal de estilos
+│   │   ├── _variables.scss
+│   │   ├── _typography.scss
+│   │   └── ...
+│   └── ts/                     # Código TypeScript
+│       ├── main.ts						  # Archivo principal de TypeScript
+│       ├── navigation.ts
+│       └── ...
+├── .gitignore								 # Archivos y carpetas a ignorar por Git
+├── .postcssrc								 # Configuración de PostCSS
+├── .posthtmlrc.cjs						 # Configuración de PostHTML
+├── LICENSE						 				 # Licencia del proyecto
+├── package-lock.json          # Archivo de bloqueo de dependencias (generado)
+├── package.json				 			 # Archivo de configuración de npm y dependencias
+├── tsconfig.json              # Configuración de TypeScript
+└── README.md
+```
+
+## Scripts Disponibles
+
+| Comando                    | Descripción                                  |
+| -------------------------- | -------------------------------------------- |
+| `npm start`                | Inicia el servidor de desarrollo             |
+| `npm run build`            | Genera el build de producción                |
+| `npm run generate:recipes` | Genera las páginas de recetas                |
+| `npm run clean`            | Limpia las carpetas `dist` y `.parcel-cache` |
+| `npm run parcel:dev`       | Solo inicia Parcel en modo desarrollo        |
+| `npm run parcel:build`     | Solo construye con Parcel (producción)       |
+
+## Tecnologías Utilizadas
+
+### Empaquetador
+
+- **Parcel 2.16+** - Empaquetador zero-config con HMR
+
+### Preprocesadores y Transformadores
+
+- **TypeScript 5.9+** - JavaScript tipado
+- **Sass (SCSS)** - Preprocesador CSS
+- **PostHTML** - Transformador HTML con plugins:
+  - `posthtml-extend` - Sistema de layouts
+  - `posthtml-include` - Inclusión de partials
+  - `posthtml-expressions` - Expresiones y lógica en templates
+- **PostCSS** - Postprocesador CSS con `postcss-normalize`
+
+### Utilidades
+
+- **Fast-glob** - Búsqueda rápida de archivos
+- **npm-run-all** - Ejecución secuencial de scripts
+- **rimraf** - Limpieza de directorios multiplataforma
+
+### UI
+
+- **Font Awesome 7+** - Iconos vectoriales en toda la web
+  ([fontawesome.com](https://fontawesome.com/))
+- **Swiper 12+** - Carrusel de tarjetas de recetas ([swiperjs.com](https://swiperjs.com/))
+- **AOS (Animate On Scroll) 3+** - Animaciones al hacer scroll ([michalsnik.github.io/aos](https://michalsnik.github.io/aos/))
+
 ## Autor
 
 [Rafael Larrea Sánchez](https://www.linkedin.com/in/rafael-larrea-s%C3%A1nchez-06824592/)
