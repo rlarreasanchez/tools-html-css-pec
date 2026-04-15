@@ -10,14 +10,65 @@
 
 	<!-- Imagen de fondo -->
 	<div class="hero__image-wrapper">
-		<img
-			class="hero__image"
-			src="../images/hero.jpg"
-			alt="Productos e ingredientes para receta tradicional"
-			width="1600"
-			height="900"
-			loading="eager"
-		/>
+		<picture>
+			<!-- Móvil -->
+			<source
+				media="(max-width: 767px)"
+				type="image/webp"
+				srcset="
+					../images/hero.jpg?as=webp&width=640&height=640&fit=cover   1x,
+					../images/hero.jpg?as=webp&width=1280&height=1280&fit=cover 2x
+				"
+			/>
+			<source
+				media="(max-width: 767px)"
+				srcset="
+					../images/hero.jpg?width=640&height=640&fit=cover   1x,
+					../images/hero.jpg?width=1280&height=1280&fit=cover 2x
+				"
+			/>
+			<!-- Tablet -->
+			<source
+				media="(min-width: 768px) and (max-width: 1023px)"
+				type="image/webp"
+				srcset="
+					../images/hero.jpg?as=webp&width=1024&height=640&fit=cover  1x,
+					../images/hero.jpg?as=webp&width=2048&height=1280&fit=cover 2x
+				"
+			/>
+			<source
+				media="(min-width: 768px) and (max-width: 1023px)"
+				srcset="
+					../images/hero.jpg?width=1024&height=640&fit=cover  1x,
+					../images/hero.jpg?width=2048&height=1280&fit=cover 2x
+				"
+			/>
+			<!-- Desktop -->
+			<source
+				media="(min-width: 1024px)"
+				type="image/webp"
+				srcset="
+					../images/hero.jpg?as=webp&width=1600&height=900  1x,
+					../images/hero.jpg?as=webp&width=3200&height=1800 2x
+				"
+			/>
+			<source
+				media="(min-width: 1024px)"
+				srcset="
+					../images/hero.jpg?width=1600&height=900  1x,
+					../images/hero.jpg?width=3200&height=1800 2x
+				"
+			/>
+			<!-- Fallback -->
+			<img
+				class="hero__image"
+				src="../images/hero.jpg?width=1600&height=900"
+				alt="Productos e ingredientes para receta tradicional"
+				width="1600"
+				height="900"
+				loading="eager"
+			/>
+		</picture>
 	</div>
 
 	<!-- Contenido -->
