@@ -10,14 +10,26 @@
 			data-aos="fade-right"
 		>
 			<div class="about__image-wrapper">
-				<img
-					class="about__image"
-					src="../images/about.jpg"
-					alt="Manos amasando pan artesanal"
-					width="800"
-					height="600"
-					loading="lazy"
-				/>
+				<picture>
+					<!-- WebP con densidad 2x -->
+					<source
+						type="image/webp"
+						srcset="
+							../images/about.jpg?as=webp&width=600  1x,
+							../images/about.jpg?as=webp&width=1200 2x
+						"
+					/>
+					<!-- Fallback con densidad 2x -->
+					<img
+						class="about__image"
+						src="../images/about.jpg"
+						srcset="../images/about.jpg?width=600 1x, ../images/about.jpg?width=1200 2x"
+						alt="Manos amasando pan artesanal"
+						width="600"
+						height="400"
+						loading="lazy"
+					/>
+				</picture>
 			</div>
 		</div>
 

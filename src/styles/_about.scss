@@ -12,7 +12,7 @@
     margin: 0 auto;
     padding: 0 $container-padding;
 
-    @media (min-width: $breakpoint-lg) {
+    @media (min-width: $breakpoint-md) {
       flex-direction: row;
       align-items: center;
       gap: $space-4xl;
@@ -22,7 +22,7 @@
   &__image-col {
     flex: 1;
 
-    @media (min-width: $breakpoint-lg) {
+    @media (min-width: $breakpoint-md) {
       flex: 0 0 45%;
     }
   }
