@@ -7,14 +7,65 @@
 		class="detail__hero"
 		data-aos="fade-down"
 	>
-		<img
-			src="/src/images/{{ image }}"
-			alt="{{ alt_image }}"
-			class="detail__hero-image"
-			width="1200"
-			height="600"
-			loading="eager"
-		/>
+		<picture>
+			<!-- Móvil -->
+			<source
+				media="(max-width: 767px)"
+				type="image/webp"
+				srcset="
+					../images/{{ image }}?as=webp&width=480&height=600&fit=cover  1x,
+					../images/{{ image }}?as=webp&width=960&height=1200&fit=cover 2x
+				"
+			/>
+			<source
+				media="(max-width: 767px)"
+				srcset="
+					../images/{{ image }}?width=480&height=600&fit=cover  1x,
+					../images/{{ image }}?width=960&height=1200&fit=cover 2x
+				"
+			/>
+			<!-- Tablet -->
+			<source
+				media="(min-width: 768px) and (max-width: 1023px)"
+				type="image/webp"
+				srcset="
+					../images/{{ image }}?as=webp&width=800&height=500&fit=cover  1x,
+					../images/{{ image }}?as=webp&width=1600&height=1000&fit=cover 2x
+				"
+			/>
+			<source
+				media="(min-width: 768px) and (max-width: 1023px)"
+				srcset="
+					../images/{{ image }}?width=800&height=500&fit=cover  1x,
+					../images/{{ image }}?width=1600&height=1000&fit=cover 2x
+				"
+			/>
+			<!-- Desktop -->
+			<source
+				media="(min-width: 1024px)"
+				type="image/webp"
+				srcset="
+					../images/{{ image }}?as=webp&width=1200&height=600&fit=cover  1x,
+					../images/{{ image }}?as=webp&width=2400&height=1200&fit=cover 2x
+				"
+			/>
+			<source
+				media="(min-width: 1024px)"
+				srcset="
+					../images/{{ image }}?width=1200&height=600&fit=cover  1x,
+					../images/{{ image }}?width=2400&height=1200&fit=cover 2x
+				"
+			/>
+			<!-- Fallback -->
+			<img
+				class="detail__hero-image"
+				src="../images/{{ image }}?width=1200&height=600&fit=cover"
+				alt="{{ alt_image }}"
+				width="1200"
+				height="600"
+				loading="eager"
+			/>
+		</picture>
 	</div>
 
 	<div class="detail__container">
@@ -84,14 +135,26 @@
 						data-aos="fade-up"
 						data-aos-delay="200"
 					>
-						<img
-							class="detail__image"
-							src="/src/images/{{ content.src }}"
-							alt="{{ content.alt }}"
-							width="800"
-							height="500"
-							loading="lazy"
-						/>
+						<picture>
+							<!-- WebP con densidad 2x -->
+							<source
+								type="image/webp"
+								srcset="
+									../images/{{ content.src }}?as=webp&width=800 1x,
+									../images/{{ content.src }}?as=webp&width=1600 2x
+								"
+							/>
+							<!-- Fallback con densidad 2x -->
+							<img
+								class="detail__image"
+								src="../images/{{ content.src }}"
+								srcset="../images/{{ content.src }}?width=800 1x, ../images/{{ content.src }}?width=1600 2x"
+								alt="{{ content.alt }}"
+								width="800"
+								height="500"
+								loading="lazy"
+							/>
+						</picture>
 						<figcaption class="detail__caption">{{{ content.caption }}}</figcaption>
 					</figure>
 				</if>
