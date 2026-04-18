@@ -6,14 +6,45 @@
 	>
 		<!-- Imagen de la receta -->
 		<div class="recipe-card__image-wrapper">
-			<img
-				src="/src/images/{{ recipe.image }}"
-				alt="{{ recipe.alt_image }}"
-				class="recipe-card__image"
-				width="600"
-				height="400"
-				loading="lazy"
-			/>
+			<picture>
+				<!-- WebP con diferentes tamaños (resolution switching) -->
+				<source
+					type="image/webp"
+					srcset="
+						../images/{{ recipe.image }}?as=webp&width=300 300w,
+						../images/{{ recipe.image }}?as=webp&width=400 400w,
+						../images/{{ recipe.image }}?as=webp&width=600 600w,
+						../images/{{ recipe.image }}?as=webp&width=800 800w
+					"
+					sizes="
+						(max-width: 768px) 100vw,
+						(max-width: 1024px) 50vw,
+						(max-width: 1200px) 33.33vw,
+						400px
+					"
+				/>
+				<!-- Fallback con diferentes tamaños -->
+				<img
+					src="../images/{{ recipe.image }}?width=300"
+					srcset="
+						../images/{{ recipe.image }}?width=300 300w,
+						../images/{{ recipe.image }}?width=400 400w,
+						../images/{{ recipe.image }}?width=600 600w,
+						../images/{{ recipe.image }}?width=800 800w
+					"
+					sizes="
+							(max-width: 768px) 100vw,
+							(max-width: 1024px) 50vw,
+							(max-width: 1200px) 33.33vw,
+							400px
+					"
+					alt="{{ recipe.alt_image }}"
+					class="recipe-card__image"
+					width="400"
+					height="300"
+					loading="lazy"
+				/>
+			</picture>
 
 			<!-- Categoría de la receta -->
 			<span class="recipe-card__category">
