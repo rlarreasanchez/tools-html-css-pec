@@ -1,5 +1,24 @@
 @use 'variables' as *;
 
+// Corte creativo
+$_about-clip: polygon(
+  0%   5%,
+  3%   2%,
+  18%  0%,
+  55%  0%,
+  82%  16%,
+  100% 33%,
+  98%  58%,
+  100% 78%,
+  94%  97%,
+  68%  100%,
+  35%  99%,
+  6%   100%,
+  0%   86%,
+  2%   54%,
+  0%   28%
+);
+
 .about {
   padding: $space-4xl 0;
   background-color: $color-background-dark;
@@ -21,16 +40,41 @@
 
   &__image-col {
     flex: 1;
+    position: relative;
 
     @media (min-width: $breakpoint-md) {
       flex: 0 0 45%;
     }
+
+    // Recorte desplazado abajo-derecha para sensación de profundidad
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-color: $color-primary;
+      clip-path: $_about-clip;
+      transform: translate(10px, 10px);
+      z-index: 0;
+    }
+
+    // Recorte esplazado arriba-izquierda
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-color: $color-primary-light;
+      clip-path: $_about-clip;
+      transform: translate(-6px, -6px);
+      z-index: 0;
+      opacity: 0.6;
+    }
   }
 
   &__image-wrapper {
-    border-radius: $radius-lg;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
     overflow: hidden;
+    clip-path: $_about-clip;
   }
 
   &__image {
@@ -39,6 +83,13 @@
     display: block;
     aspect-ratio: 4 / 3;
     object-fit: cover;
+    filter: contrast(1.05) saturate(1.1);
+    transition: transform 0.6s ease, filter 0.6s ease;
+
+    &:hover {
+      transform: scale(1.06);
+      filter: contrast(1.08) saturate(1.18);
+    }
   }
 
   &__text-col {
