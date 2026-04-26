@@ -54,6 +54,34 @@
     color: $color-muted-light;
   }
 
+  &__seal {
+    margin-top: $space-sm;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $space-sm;
+  }
+
+  &__seal-image {
+    width: 150px;
+    height: auto;
+    border-radius: $radius-md;
+    opacity: 0.85;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+
+    &:hover {
+      opacity: 1;
+      transform: scale(1.05);
+    }
+  }
+
+  &__seal-label {
+    font-size: $font-size-xs;
+    color: $color-muted-light;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
   &__nav {
     display: flex;
     flex: 1;

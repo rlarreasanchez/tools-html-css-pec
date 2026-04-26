@@ -19,6 +19,31 @@
 			<p class="site-footer__tagline">
 				Recetas artesanales y la pasión por la cocina auténtica desde 2014.
 			</p>
+			<div class="site-footer__seal">
+				<picture>
+					<!-- WebP: formato moderno con mayor compresión -->
+					<source
+						type="image/webp"
+						srcset="
+							../images/sello_calidad.png?as=webp&width=100 1x,
+							../images/sello_calidad.png?as=webp&width=200 2x
+						"
+					/>
+					<!-- PNG: fallback para navegadores sin soporte WebP -->
+					<img
+						class="site-footer__seal-image"
+						src="../images/sello_calidad.png?width=100"
+						srcset="
+							../images/sello_calidad.png?width=100 1x,
+							../images/sello_calidad.png?width=200 2x
+						"
+						alt="Sello de calidad artesanal"
+						width="150"
+						height="150"
+						loading="lazy"
+					/>
+				</picture>
+			</div>
 		</div>
 
 		<nav
