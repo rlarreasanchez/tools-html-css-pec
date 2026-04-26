@@ -125,6 +125,19 @@ $_about-clip: polygon(
   &__stat {
     text-align: center;
     flex: 1;
+    cursor: default;
+
+    &:hover {
+      .about__stat-number {
+        transform: scale(1.1) translateY(-3px);
+        color: $color-primary-dark;
+      }
+
+      .about__stat-label {
+        color: $color-primary-light;
+        letter-spacing: 0.08em;
+      }
+    }
 
     @media(max-width: ($breakpoint-sm - 1px)) {
       text-align: left;
@@ -142,6 +155,7 @@ $_about-clip: polygon(
     line-height: 1;
     color: $color-primary;
     margin-bottom: $space-sm;
+    transition: transform 0.3s ease, color 0.3s ease;
   }
 
   &__stat-label {
@@ -151,5 +165,6 @@ $_about-clip: polygon(
     color: $color-muted;
     text-transform: uppercase;
     letter-spacing: 0.05em;
+    transition: color 0.3s ease, letter-spacing 0.3s ease;
   }
 }

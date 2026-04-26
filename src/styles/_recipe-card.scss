@@ -24,6 +24,12 @@
       .recipe-card__title {
         color: $color-primary;
       }
+
+      .recipe-card__category {
+        background-color: $color-primary;
+        color: $color-white;
+        transform: scale(1.06);
+      }
     }
 
     &:focus-visible {
@@ -57,6 +63,7 @@
     text-transform: uppercase;
     letter-spacing: 0.08em;
     border-radius: $radius-sm;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
   }
 
   &__content {

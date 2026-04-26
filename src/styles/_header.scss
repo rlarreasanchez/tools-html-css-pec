@@ -140,7 +140,29 @@
     color: $color-foreground;
     text-decoration: none;
     border-radius: $radius-md;
+    position: relative;
     transition: background-color 0.3s ease, color 0.3s ease;
+
+    // Subrayado deslizante en hover — solo desktop
+    @media (min-width: $breakpoint-lg) {
+      &::before {
+        content: '';
+        position: absolute;
+        bottom: 2px;
+        left: $space-md;
+        right: $space-md;
+        height: 2px;
+        background-color: $color-primary;
+        border-radius: 1px;
+        transform: scaleX(0);
+        transform-origin: left center;
+        transition: transform 0.25s ease;
+      }
+
+      &:hover::before {
+        transform: scaleX(1);
+      }
+    }
 
     // Línea indicadora para el enlace activo
     &--active {

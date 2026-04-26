@@ -32,6 +32,23 @@ body {
   line-height: $line-height-tight;
   color: $color-foreground;
   margin-bottom: $space-md;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background: linear-gradient(to right, $color-primary, $color-primary-light);
+    border-radius: 2px;
+    transition: width 0.45s cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
 
   @media (min-width: $breakpoint-md) {
     font-size: $font-size-3xl;
@@ -39,6 +56,10 @@ body {
 
   &--light {
     color: $color-white;
+
+    &::after {
+      background: linear-gradient(to right, $color-primary-light, rgba($color-primary-light, 0.3));
+    }
   }
 }
 

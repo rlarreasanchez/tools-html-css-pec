@@ -89,7 +89,7 @@
     font-size: $font-size-sm;
     color: $color-muted-light;
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, transform 0.25s ease;
     display: inline-block;
     align-items: center;
     gap: $space-xs;
@@ -98,6 +98,7 @@
       color: $color-white;
       text-decoration: underline;
       text-underline-offset: 2px;
+      transform: translateX(6px);
     }
   }
 
