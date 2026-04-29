@@ -41,6 +41,7 @@
 		"@fortawesome/fontawesome-free": "^7.2.0",
 		"aos": "^2.3.4",
 		"fast-glob": "^3.3.3",
+		"sharp": "^0.34.5",
 		"swiper": "^12.1.2"
 	}
 }
