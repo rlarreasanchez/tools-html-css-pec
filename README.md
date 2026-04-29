@@ -18,6 +18,40 @@ Sitio web de recetas con generación automática de páginas con los detalles de
 - **Optimización automática** en producción (minificación, tree-shaking) gracias a Parcel
 - **Diseño responsive** adaptado a múltiples dispositivos
 
+## Tratamiento de Imágenes y Recursos Visuales
+
+### Imágenes Responsive
+
+El proyecto implementa **tres técnicas de imágenes responsive** según el tipo de imagen y su función en la interfaz:
+
+#### 1. Resolution Switching por Tamaño
+
+Utilizado en las **tarjetas de recetas** mediante `srcset` con descriptores de ancho (`300w`, `400w`, `600w`, `800w`) y el atributo `sizes`. El navegador selecciona automáticamente la imagen más adecuada según el espacio disponible en el viewport. Beneficio principal: dispositivos móviles descargan versiones más ligeras, reduciendo el tiempo de carga y el consumo de datos.
+
+#### 2. Resolution Switching por Densidad de Píxeles
+
+Aplicado en **imágenes de contenido de recetas, sección About y sello del footer** mediante variantes `1x` y `2x`. Pantallas de alta densidad (Retina, HiDPI) descargan la versión `2x` para mantener la nitidez, mientras que pantallas estándar usan la versión `1x`. El tamaño visual no cambia, solo la calidad según la capacidad del dispositivo.
+
+#### 3. Dirección de Arte
+
+Implementado en **imagen hero y cabeceras de recetas** mediante el elemento `<picture>` con diferentes recortes y proporciones por breakpoint. Por ejemplo, el hero usa un recorte cuadrado en móvil (640×640), formato horizontal en tablet (1024×640) y panorámico en desktop (1600×900). Esto preserva el foco visual y la composición en todos los dispositivos.
+
+### Optimización de Imágenes
+
+Todas las imágenes se optimizan automáticamente a **WebP** mediante **Sharp** integrado con Parcel durante el build, logrando una reducción superior al **60%** del peso total sin pérdida perceptible de calidad. Se mantiene fallback a formatos originales (JPG/PNG) para navegadores sin soporte WebP. La configuración de calidad y compresión se define en `sharp.config.json`.
+
+### Animaciones y Transiciones CSS
+
+Las animaciones se clasifican en tres grupos: **microinteracciones** (hover/focus en tarjetas y botones), **animaciones de entrada** (aparición progresiva de contenido filtrado) y **animaciones expresivas** (entrada de elementos decorativos del hero). Se utiliza la librería **AOS (Animate On Scroll)** para animar bloques al hacer scroll de forma controlada, con duración de 800ms y ejecución única (`once: true`).
+
+### SVG Decorativo
+
+El hero incluye un **SVG inline animado** con elementos de cubiertos que aparecen de forma escalonada mediante `@keyframes`. El SVG está marcado con `aria-hidden="true"` para que los lectores de pantalla lo ignoren, ya que cumple una función puramente decorativa.
+
+### Uso de clip-path
+
+En la sección "Sobre nosotros" se utiliza **clip-path** con una forma poligonal personalizada para recortar la imagen con un encuadre orgánico. La misma forma se aplica a pseudo-elementos desplazados que generan capas de color, creando un efecto de profundidad sin comprometer la accesibilidad del contenido.
+
 ## Requisitos Previos
 
 Antes de comenzar, asegúrate de tener instalado:
