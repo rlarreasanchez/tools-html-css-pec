@@ -98,7 +98,7 @@
 				<h3 class="site-footer__nav-title">Últimas Recetas</h3>
 				<ul class="site-footer__nav-list">
 					<each loop="recipe in recipes.slice(0, 4)">
-						<li class="swiper-slide">
+						<li>
 							<a
 								href="{{ recipe.link }}"
 								class="site-footer__link"
@@ -109,28 +109,24 @@
 											class="fas fa-wheat-awn icon-space-right"
 											aria-hidden="true"
 										></i>
-										<break>
 									</case>
 									<case n="'Pescado'">
 										<i
 											class="fas fa-fish icon-space-right"
 											aria-hidden="true"
 										></i>
-										<break>
 									</case>
 									<case n="'Postres'">
 										<i
 											class="fas fa-birthday-cake icon-space-right"
 											aria-hidden="true"
 										></i>
-										<break>
 									</case>
 									<case n="'Arroces'">
 										<i
 											class="fas fa-bowl-rice icon-space-right"
 											aria-hidden="true"
 										></i>
-										<break>
 									</case>
 									<default>
 										<i
