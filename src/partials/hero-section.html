@@ -16,53 +16,82 @@
 				media="(max-width: 767px)"
 				type="image/webp"
 				srcset="
-					../images/hero.jpg?as=webp&width=640&height=640&fit=cover   1x,
-					../images/hero.jpg?as=webp&width=1280&height=1280&fit=cover 2x
+					../images/hero.jpg?as=webp&width=480&height=560&fit=cover    480w,
+					../images/hero.jpg?as=webp&width=640&height=720&fit=cover    640w,
+					../images/hero.jpg?as=webp&width=960&height=1120&fit=cover   960w,
+					../images/hero.jpg?as=webp&width=1280&height=1440&fit=cover 1280w
 				"
+				sizes="100vw"
 			/>
 			<source
 				media="(max-width: 767px)"
 				srcset="
-					../images/hero.jpg?width=640&height=640&fit=cover   1x,
-					../images/hero.jpg?width=1280&height=1280&fit=cover 2x
+					../images/hero.jpg?width=480&height=560&fit=cover    480w,
+					../images/hero.jpg?width=640&height=720&fit=cover    640w,
+					../images/hero.jpg?width=960&height=1120&fit=cover   960w,
+					../images/hero.jpg?width=1280&height=1440&fit=cover 1280w
 				"
+				sizes="100vw"
 			/>
 			<!-- Tablet -->
 			<source
 				media="(min-width: 768px) and (max-width: 1023px)"
 				type="image/webp"
 				srcset="
-					../images/hero.jpg?as=webp&width=1024&height=640&fit=cover  1x,
-					../images/hero.jpg?as=webp&width=2048&height=1280&fit=cover 2x
+					../images/hero.jpg?as=webp&width=768&height=520&fit=cover    768w,
+					../images/hero.jpg?as=webp&width=1024&height=680&fit=cover  1024w,
+					../images/hero.jpg?as=webp&width=1366&height=910&fit=cover  1366w,
+					../images/hero.jpg?as=webp&width=1600&height=1066&fit=cover 1600w
 				"
+				sizes="100vw"
 			/>
 			<source
 				media="(min-width: 768px) and (max-width: 1023px)"
 				srcset="
-					../images/hero.jpg?width=1024&height=640&fit=cover  1x,
-					../images/hero.jpg?width=2048&height=1280&fit=cover 2x
+					../images/hero.jpg?width=768&height=520&fit=cover    768w,
+					../images/hero.jpg?width=1024&height=680&fit=cover  1024w,
+					../images/hero.jpg?width=1366&height=910&fit=cover  1366w,
+					../images/hero.jpg?width=1600&height=1066&fit=cover 1600w
 				"
+				sizes="100vw"
 			/>
 			<!-- Desktop -->
 			<source
 				media="(min-width: 1024px)"
 				type="image/webp"
 				srcset="
-					../images/hero.jpg?as=webp&width=1600&height=900  1x,
-					../images/hero.jpg?as=webp&width=3200&height=1800 2x
+					../images/hero.jpg?as=webp&width=1280&height=720&fit=cover  1280w,
+					../images/hero.jpg?as=webp&width=1600&height=900&fit=cover  1600w,
+					../images/hero.jpg?as=webp&width=1920&height=1080&fit=cover 1920w,
+					../images/hero.jpg?as=webp&width=2400&height=1350&fit=cover 2400w
 				"
+				sizes="100vw"
 			/>
 			<source
 				media="(min-width: 1024px)"
 				srcset="
-					../images/hero.jpg?width=1600&height=900  1x,
-					../images/hero.jpg?width=3200&height=1800 2x
+					../images/hero.jpg?width=1280&height=720&fit=cover  1280w,
+					../images/hero.jpg?width=1600&height=900&fit=cover  1600w,
+					../images/hero.jpg?width=1920&height=1080&fit=cover 1920w,
+					../images/hero.jpg?width=2400&height=1350&fit=cover 2400w
 				"
+				sizes="100vw"
 			/>
 			<!-- Fallback -->
 			<img
 				class="hero__image"
-				src="../images/hero.jpg?width=1600&height=900"
+				src="../images/hero.jpg?width=1280&height=720&fit=cover"
+				srcset="
+					../images/hero.jpg?width=480&height=560&fit=cover    480w,
+					../images/hero.jpg?width=640&height=720&fit=cover    640w,
+					../images/hero.jpg?width=768&height=520&fit=cover    768w,
+					../images/hero.jpg?width=1024&height=680&fit=cover  1024w,
+					../images/hero.jpg?width=1280&height=720&fit=cover  1280w,
+					../images/hero.jpg?width=1600&height=900&fit=cover  1600w,
+					../images/hero.jpg?width=1920&height=1080&fit=cover 1920w,
+					../images/hero.jpg?width=2400&height=1350&fit=cover 2400w
+				"
+				sizes="100vw"
 				alt="Productos e ingredientes para receta tradicional"
 				width="1600"
 				height="900"

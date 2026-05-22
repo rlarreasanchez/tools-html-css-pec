@@ -11,32 +11,32 @@
 				<source
 					type="image/webp"
 					srcset="
-						../images/{{ recipe.image }}?as=webp&width=300 300w,
-						../images/{{ recipe.image }}?as=webp&width=400 400w,
-						../images/{{ recipe.image }}?as=webp&width=600 600w,
-						../images/{{ recipe.image }}?as=webp&width=800 800w
+						../images/{{ recipe.image }}?as=webp&width=240 240w,
+						../images/{{ recipe.image }}?as=webp&width=320 320w,
+						../images/{{ recipe.image }}?as=webp&width=480 480w,
+						../images/{{ recipe.image }}?as=webp&width=640 640w,
+						../images/{{ recipe.image }}?as=webp&width=720 720w
 					"
 					sizes="
-						(max-width: 768px) 100vw,
-						(max-width: 1024px) 50vw,
-						(max-width: 1200px) 33.33vw,
-						400px
+						(max-width: 767px) calc(100vw - 2rem),
+						(max-width: 1023px) calc(50vw - 1.5rem),
+						(min-width: 1024px) calc((1200px - 4rem) / 3)
 					"
 				/>
 				<!-- Fallback con diferentes tamaños -->
 				<img
-					src="../images/{{ recipe.image }}?width=300"
+					src="../images/{{ recipe.image }}?width=320"
 					srcset="
-						../images/{{ recipe.image }}?width=300 300w,
-						../images/{{ recipe.image }}?width=400 400w,
-						../images/{{ recipe.image }}?width=600 600w,
-						../images/{{ recipe.image }}?width=800 800w
+						../images/{{ recipe.image }}?width=240 240w,
+						../images/{{ recipe.image }}?width=320 320w,
+						../images/{{ recipe.image }}?width=480 480w,
+						../images/{{ recipe.image }}?width=640 640w,
+						../images/{{ recipe.image }}?width=720 720w
 					"
 					sizes="
-							(max-width: 768px) 100vw,
-							(max-width: 1024px) 50vw,
-							(max-width: 1200px) 33.33vw,
-							400px
+							(max-width: 767px) calc(100vw - 2rem),
+							(max-width: 1023px) calc(50vw - 1.5rem),
+							(min-width: 1024px) calc((1200px - 4rem) / 3)
 					"
 					alt="{{ recipe.alt_image }}"
 					class="recipe-card__image"

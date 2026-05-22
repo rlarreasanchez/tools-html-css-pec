@@ -11,19 +11,28 @@
 		>
 			<div class="about__image-wrapper">
 				<picture>
-					<!-- WebP con densidad 2x -->
+					<!-- WebP adaptado al ancho real del bloque -->
 					<source
 						type="image/webp"
 						srcset="
-							../images/about.jpg?as=webp&width=600  1x,
-							../images/about.jpg?as=webp&width=1200 2x
+							../images/about.jpg?as=webp&width=360 360w,
+							../images/about.jpg?as=webp&width=480 480w,
+							../images/about.jpg?as=webp&width=720 720w,
+							../images/about.jpg?as=webp&width=960 960w
 						"
+						sizes="(min-width: 768px) 45vw, calc(100vw - 2rem)"
 					/>
-					<!-- Fallback con densidad 2x -->
+					<!-- Fallback JPG con tamaños equivalentes -->
 					<img
 						class="about__image"
-						src="../images/about.jpg"
-						srcset="../images/about.jpg?width=600 1x, ../images/about.jpg?width=1200 2x"
+						src="../images/about.jpg?width=480"
+						srcset="
+							../images/about.jpg?width=360 360w,
+							../images/about.jpg?width=480 480w,
+							../images/about.jpg?width=720 720w,
+							../images/about.jpg?width=960 960w
+						"
+						sizes="(min-width: 768px) 45vw, calc(100vw - 2rem)"
 						alt="Manos amasando pan artesanal"
 						width="600"
 						height="400"
