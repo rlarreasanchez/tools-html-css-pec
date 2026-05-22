@@ -1,0 +1,7 @@
+@use 'variables' as *;
+
+// Listing page specific styles (categoria.html)
+@use 'breadcrumb';
+@use 'page-header';
+@use 'category-list';
+@use 'recipe-card';

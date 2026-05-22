@@ -1,0 +1,11 @@
+@use 'variables' as *;
+
+// Base styles needed on all pages
+@use 'reset';
+@use 'typography';
+@use 'icons';
+@use 'buttons';
+
+// Common components across all pages
+@use 'header';
+@use 'footer';

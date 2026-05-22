@@ -20,22 +20,14 @@
 			href="/src/images/favicon.ico"
 		/>
 
-		<!-- Critical CSS: cargar de forma prioritaria -->
+		<!-- Common CSS: cargar de forma bloqueante -->
 		<link
-			rel="preload"
-			href="/src/styles/styles.scss"
-			as="style"
-			onload="
-				this.onload = null;
-				this.rel = 'stylesheet';
-			"
+			rel="stylesheet"
+			href="/src/styles/common.scss"
 		/>
-		<noscript>
-			<link
-				rel="stylesheet"
-				href="/src/styles/styles.scss"
-			/>
-		</noscript>
+
+		<!-- Page-specific CSS: cada página inyectará sus propios estilos -->
+		<block name="page-styles"></block>
 
 		<!-- Preconnect para fuentes: establecer conexión temprana -->
 		<link

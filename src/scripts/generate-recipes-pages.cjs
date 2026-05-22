@@ -35,6 +35,12 @@ recipes.forEach((recipe, index) => {
 			src="layouts/site-page-layout.html"
 			locals='{"title": "${recipe.title}", "description": "${recipe.description}"}'
 		>
+	<block name="page-styles">
+		<link
+			rel="stylesheet"
+			href="/src/styles/detail-page.scss"
+		/>
+	</block>
 	<block name="content">
 		<each loop="recipe in recipes">
 			<if condition="recipe.link === '/${slug}'">
