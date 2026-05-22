@@ -19,10 +19,25 @@
 			rel="icon"
 			href="/src/images/favicon.ico"
 		/>
+
+		<!-- Critical CSS: cargar de forma prioritaria -->
 		<link
-			rel="stylesheet"
+			rel="preload"
 			href="/src/styles/styles.scss"
+			as="style"
+			onload="
+				this.onload = null;
+				this.rel = 'stylesheet';
+			"
 		/>
+		<noscript>
+			<link
+				rel="stylesheet"
+				href="/src/styles/styles.scss"
+			/>
+		</noscript>
+
+		<!-- Preconnect para fuentes: establecer conexión temprana -->
 		<link
 			rel="preconnect"
 			href="https://fonts.googleapis.com"
@@ -32,10 +47,20 @@
 			href="https://fonts.gstatic.com"
 			crossorigin
 		/>
+
+		<!-- Fuentes optimizadas: solo variantes necesarias + font-display swap -->
 		<link
-			href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Sans+3:wght@300;400;600;700&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Sans+3:wght@400;600&display=swap"
 			rel="stylesheet"
+			media="print"
+			onload="this.media = 'all'"
 		/>
+		<noscript>
+			<link
+				href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Sans+3:wght@400;600&display=swap"
+				rel="stylesheet"
+			/>
+		</noscript>
 	</head>
 	<body>
 		<include src="partials/header.html"></include>
