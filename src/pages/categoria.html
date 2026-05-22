@@ -153,5 +153,12 @@
 				</nav>
 			</div>
 		</section>
+
+		<!-- Script de paginación: solo se carga en esta página -->
+		<script type="module">
+			// Cargar el módulo de paginación inmediatamente para mostrar las imágenes
+			import { initPagination } from "/src/ts/pagination.ts";
+			initPagination();
+		</script>
 	</block>
 </extends>

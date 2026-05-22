@@ -264,6 +264,6 @@ export function initPagination(): void {
 	// Actualizar paginación inicial
 	updatePagination();
 
-	// Mostrar la primera página por defecto
+	// Mostrar la primera página por defecto (esto cargará las imágenes automáticamente)
 	showPage(1);
 }

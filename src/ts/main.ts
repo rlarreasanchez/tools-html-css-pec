@@ -38,16 +38,6 @@ async function loadNewsletter(): Promise<void> {
 	}
 }
 
-// Carga asíncrona de Paginación solo si hay elementos con paginación
-async function loadPagination(): Promise<void> {
-	const paginationNav = document.querySelector(".pagination");
-	const categoryList = document.querySelector(".category-list");
-	if (paginationNav || categoryList) {
-		const { initPagination } = await import("./pagination");
-		initPagination();
-	}
-}
-
 function initApp(): void {
 	// Carga de Módulos críticos - cargar inmediatamente
 	initNavigation();
@@ -63,13 +53,7 @@ function initApp(): void {
 	const idle = window.requestIdleCallback || ((cb) => setTimeout(cb, 1));
 
 	idle(async () => {
-		await Promise.all([
-			loadFontAwesome(),
-			loadNewsletter(),
-			loadPagination(),
-			loadSwiper(),
-			loadAOS(),
-		]);
+		await Promise.all([loadFontAwesome(), loadNewsletter(), loadSwiper(), loadAOS()]);
 	});
 }
 
