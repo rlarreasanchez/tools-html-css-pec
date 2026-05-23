@@ -22,126 +22,128 @@
 			</p>
 		</div>
 
-		<!-- Formulario de suscripción -->
-		<form
-			class="newsletter__form"
-			id="newsletter-form"
-			action="#"
-			method="post"
-			novalidate
-			aria-labelledby="newsletter-title"
-		>
-			<div class="newsletter__form-group">
-				<!-- Campo Nombre -->
-				<div class="newsletter__field">
-					<label
-						for="newsletter-name"
-						class="newsletter__label"
-					>
-						Nombre
-					</label>
-					<input
-						type="text"
-						id="newsletter-name"
-						name="name"
-						class="newsletter__input"
-						placeholder="Tu nombre"
-						autocomplete="given-name"
-						required
-						aria-describedby="newsletter-name-error"
-					/>
-					<span
-						id="newsletter-name-error"
-						class="newsletter__error"
-						aria-live="polite"
-						role="alert"
-					></span>
-				</div>
-
-				<!-- Campo Correo electrónico -->
-				<div class="newsletter__field">
-					<label
-						for="newsletter-email"
-						class="newsletter__label"
-					>
-						Correo electrónico
-					</label>
-					<input
-						type="email"
-						id="newsletter-email"
-						name="email"
-						class="newsletter__input"
-						placeholder="Tu correo electrónico"
-						autocomplete="email"
-						required
-						aria-describedby="newsletter-email-error"
-					/>
-					<span
-						id="newsletter-email-error"
-						class="newsletter__error"
-						aria-live="polite"
-						role="alert"
-					></span>
-				</div>
-			</div>
-
-			<!-- Checkbox de consentimiento -->
-			<div class="newsletter__consent">
-				<div class="newsletter__consent-field">
-					<input
-						type="checkbox"
-						id="newsletter-consent"
-						name="consent"
-						class="newsletter__checkbox"
-						required
-						aria-describedby="newsletter-consent-error"
-					/>
-					<label
-						for="newsletter-consent"
-						class="newsletter__consent-label"
-					>
-						Acepto recibir correos electrónicos con recetas y promociones y la
-						<a
-							href="#"
-							class="newsletter__consent-link"
-							>política de privacidad</a
-						>. Puedo cancelar mi suscripción en cualquier momento.
-					</label>
-				</div>
-				<span
-					id="newsletter-consent-error"
-					class="newsletter__error"
-					aria-live="polite"
-					role="alert"
-				></span>
-			</div>
-
-			<!-- Botón de envío -->
-			<button
-				type="submit"
-				class="btn btn--primary btn--full newsletter__submit"
+		<div class="newsletter__form-container">
+			<!-- Formulario de suscripción -->
+			<form
+				class="newsletter__form"
+				id="newsletter-form"
+				action="#"
+				method="post"
+				novalidate
+				aria-labelledby="newsletter-title"
 			>
-				<i
-					class="fas fa-paper-plane icon-space-right"
-					aria-hidden="true"
-				></i>
-				Suscribirme a la newsletter
-			</button>
-		</form>
+				<div class="newsletter__form-group">
+					<!-- Campo Nombre -->
+					<div class="newsletter__field">
+						<label
+							for="newsletter-name"
+							class="newsletter__label"
+						>
+							Nombre
+						</label>
+						<input
+							type="text"
+							id="newsletter-name"
+							name="name"
+							class="newsletter__input"
+							placeholder="Tu nombre"
+							autocomplete="given-name"
+							required
+							aria-describedby="newsletter-name-error"
+						/>
+						<span
+							id="newsletter-name-error"
+							class="newsletter__error"
+							aria-live="polite"
+							role="alert"
+						></span>
+					</div>
 
-		<!-- Mensaje de éxito -->
-		<div
-			class="newsletter__success"
-			id="newsletter-success"
-			aria-live="polite"
-			role="status"
-			hidden
-		>
+					<!-- Campo Correo electrónico -->
+					<div class="newsletter__field">
+						<label
+							for="newsletter-email"
+							class="newsletter__label"
+						>
+							Correo electrónico
+						</label>
+						<input
+							type="email"
+							id="newsletter-email"
+							name="email"
+							class="newsletter__input"
+							placeholder="Tu correo electrónico"
+							autocomplete="email"
+							required
+							aria-describedby="newsletter-email-error"
+						/>
+						<span
+							id="newsletter-email-error"
+							class="newsletter__error"
+							aria-live="polite"
+							role="alert"
+						></span>
+					</div>
+				</div>
+
+				<!-- Checkbox de consentimiento -->
+				<div class="newsletter__consent">
+					<div class="newsletter__consent-field">
+						<input
+							type="checkbox"
+							id="newsletter-consent"
+							name="consent"
+							class="newsletter__checkbox"
+							required
+							aria-describedby="newsletter-consent-error"
+						/>
+						<label
+							for="newsletter-consent"
+							class="newsletter__consent-label"
+						>
+							Acepto recibir correos electrónicos con recetas y promociones y la
+							<a
+								href="#"
+								class="newsletter__consent-link"
+								>política de privacidad</a
+							>. Puedo cancelar mi suscripción en cualquier momento.
+						</label>
+					</div>
+					<span
+						id="newsletter-consent-error"
+						class="newsletter__error"
+						aria-live="polite"
+						role="alert"
+					></span>
+				</div>
+
+				<!-- Botón de envío -->
+				<button
+					type="submit"
+					class="btn btn--primary btn--full newsletter__submit"
+				>
+					<i
+						class="fas fa-paper-plane icon-space-right"
+						aria-hidden="true"
+					></i>
+					Suscribirme a la newsletter
+				</button>
+			</form>
+
+			<!-- Mensaje de éxito -->
 			<div
-				class="fas fa-check-circle icon--success icon-space-right"
-				aria-hidden="true"
-			></div>
-			<span>¡Gracias por suscribirte! Revisa tu correo para confirmar tu suscripción.</span>
+				class="newsletter__success"
+				id="newsletter-success"
+				aria-live="polite"
+				role="status"
+				hidden
+			>
+				<div
+					class="fas fa-check-circle icon--success icon-space-right"
+					aria-hidden="true"
+				></div>
+				<span>¡Gracias por suscribirte! Revisa tu correo para confirmar tu suscripción.</span>
+			</div>
 		</div>
 	</div>
 </section>

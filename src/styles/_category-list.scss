@@ -52,6 +52,7 @@
   &__pagination {
     margin-top: $space-xl;
     padding-top: $space-2xl;
+    min-height: 6rem; // Reservar espacio para botones de paginación
   }
 }
 

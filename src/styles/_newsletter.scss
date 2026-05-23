@@ -36,11 +36,21 @@
     }
   }
 
-  // Formulario
-  &__form {
+  // Contenedor del formulario y mensaje de éxito
+  &__form-container {
     flex: 1;
     width: 100%;
     max-width: 480px;
+    min-height: 24rem; // Altura mínima para evitar CLS al cambiar de formulario a mensaje
+
+    @media (min-width: $breakpoint-sm) {
+      min-height: 22rem;
+    }
+  }
+
+  // Formulario
+  &__form {
+    width: 100%;
   }
 
   &__form-group {
@@ -161,12 +171,12 @@
     display: flex;
     align-items: center;
     gap: $space-sm;
-    margin-top: $space-lg;
     padding: $space-md;
     background-color: $color-success-light;
     border: 1px solid $color-success;
     border-radius: $radius-md;
     text-align: left;
+    min-height: 5.5rem; // Altura mínima estable
 
     p {
       font-size: $font-size-sm;
