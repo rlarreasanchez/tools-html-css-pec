@@ -6,7 +6,6 @@
     max-height: 480px;
     overflow: hidden;
     background-color: $color-foreground;
-    aspect-ratio: 2 / 1;
   }
 
   &__hero-image {
@@ -102,7 +101,6 @@
   &__image {
     width: 100%;
     height: auto;
-    aspect-ratio: 8 / 5;
     border-radius: $radius-lg;
     display: block;
   }
