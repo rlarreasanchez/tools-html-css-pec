@@ -12,3 +12,7 @@ npm-debug.log*
 
 # Archivos generados de las recetas
 src/pages/det*.html
+
+# Archivos generados de iconos SVG
+src/images/icons/icons-sprite.svg
+src/partials/icon-sprite.html

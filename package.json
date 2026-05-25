@@ -4,9 +4,10 @@
 	"type": "module",
 	"browserslist": "> 0.2%, last 10 years, not dead",
 	"scripts": {
+		"generate:icons": "node src/scripts/generate-icons.cjs",
 		"generate:recipes": "node src/scripts/generate-recipes-pages.cjs",
-		"start": "npm-run-all clean generate:recipes parcel:dev",
-		"build": "npm-run-all clean generate:recipes parcel:build",
+		"start": "npm-run-all clean generate:icons generate:recipes parcel:dev",
+		"build": "npm-run-all clean generate:icons generate:recipes parcel:build",
 		"parcel:dev": "parcel src/pages/*.html",
 		"parcel:build": "parcel build src/pages/*.html",
 		"clean": "rimraf dist .parcel-cache"
@@ -38,7 +39,8 @@
 		"typescript": "^5.9.3"
 	},
 	"dependencies": {
-		"@fortawesome/fontawesome-free": "^7.2.0",
+		"@iconify/json": "^2.2.478",
+		"@iconify/utils": "^3.1.3",
 		"aos": "^2.3.4",
 		"fast-glob": "^3.3.3",
 		"sharp": "^0.33.5",

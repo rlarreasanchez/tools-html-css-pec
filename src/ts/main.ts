@@ -8,12 +8,6 @@
 
 import { initNavigation } from "./navigation";
 
-// Carga asíncrona de Font Awesome
-async function loadFontAwesome(): Promise<void> {
-	// @ts-expect-error - No tiene declaraciones de tipos
-	await import("@fortawesome/fontawesome-free/css/all.min.css");
-}
-
 // Carga asíncrona de Swiper solo si el elemento existe en la página
 async function loadSwiper(): Promise<void> {
 	const swiperEl = document.querySelector(".recipes-swiper");
@@ -53,7 +47,7 @@ function initApp(): void {
 	const idle = window.requestIdleCallback || ((cb) => setTimeout(cb, 1));
 
 	idle(async () => {
-		await Promise.all([loadFontAwesome(), loadNewsletter(), loadSwiper(), loadAOS()]);
+		await Promise.all([loadNewsletter(), loadSwiper(), loadAOS()]);
 	});
 }
 

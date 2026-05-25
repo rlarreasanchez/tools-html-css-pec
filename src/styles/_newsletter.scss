@@ -187,5 +187,9 @@
     &[hidden] {
       display: none;
     }
+
+    & svg {
+      font-size: 1.25em;
+    }
   }
 }

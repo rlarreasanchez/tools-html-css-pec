@@ -59,18 +59,22 @@
 			<p class="recipe-card__description">{{{ recipe.description_html }}}</p>
 			<div class="recipe-card__meta">
 				<div class="recipe-card__meta-item">
-					<i
-						class="far fa-clock icon--primary"
+					<svg
+						class="icon icon--primary"
 						aria-hidden="true"
-					></i>
+					>
+						<use href="#fa-clock"></use>
+					</svg>
 					<span class="sr-only">Duración: </span>
 					{{ recipe.duration }}
 				</div>
 				<div class="recipe-card__meta-item">
-					<i
-						class="far fa-star icon--primary"
+					<svg
+						class="icon icon--primary"
 						aria-hidden="true"
-					></i>
+					>
+						<use href="#fa-star"></use>
+					</svg>
 					<span class="sr-only">Dificultad: </span>
 					{{ recipe.difficulty }}
 				</div>

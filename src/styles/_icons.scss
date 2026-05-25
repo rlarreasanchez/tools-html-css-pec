@@ -1,11 +1,19 @@
 @use 'variables' as *;
 
+// Estilos base para iconos SVG
 .icon {
-  &--primary {
-    color: $color-primary;
-  }
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	vertical-align: -0.125em;
+	fill: currentColor;
+
+	&--primary {
+		color: $color-primary;
+	}
 }
 
+// Clases de espaciado compatibles con Font Awesome
 .icon-space-right {
 	margin-right: 0.5rem;
 }
@@ -15,7 +23,15 @@
 }
 
 .external-link-icon {
-  font-size: 0.75em;
-  margin-left: 0.25em;
-  vertical-align: middle;
+	font-size: 0.75em;
+	margin-left: 0.25em;
+	vertical-align: middle;
+}
+
+// Chevrones especiales para la paginación de detalles
+.icon-chevron-left,
+.icon-chevron-right {
+	width: 1em;
+	height: 1em;
+	fill: currentColor;
 }
