@@ -79,7 +79,6 @@ function showPage(pageNumber: number, shouldScroll: boolean = false): void {
 	// Ocultar todos los items
 	recipeItems.forEach((item) => {
 		item.classList.remove("is-visible");
-		item.setAttribute("aria-hidden", "true");
 	});
 
 	// Calcular qué items mostrar según la página y los filtros
@@ -89,7 +88,6 @@ function showPage(pageNumber: number, shouldScroll: boolean = false): void {
 
 	itemsToShow.forEach((item) => {
 		item.classList.add("is-visible");
-		item.setAttribute("aria-hidden", "false");
 	});
 
 	// Actualizar el estado actual
